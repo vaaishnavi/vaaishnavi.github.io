@@ -1,0 +1,1565 @@
+/* Define variables */
+:root {
+  --black: #2b2b2b;
+  --size: 42px;
+}
+
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap');
+
+body {
+  background: #0a192f;
+  margin-left: 3.5em;
+  margin-right: 3.5em;
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+  font-family: "Roboto Mono";
+  color: white;
+  overflow: scroll;
+  overflow-x: hidden;
+
+}
+
+/* Typing container styles */
+body .container-typing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body .container-typing #text-feature {
+  margin-left: 8px;
+}
+
+body .container-typing .input-cursor {
+  display: inline-block;
+  width: 2px;
+  height: var(--size);
+  background-color: white;
+  margin-left: 8px;
+  animation: blink .6s linear infinite alternate;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.typing-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.input-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 42px;
+  background-color: white;
+  margin-left: 8px;
+  animation: blink .6s linear infinite alternate;
+}
+
+
+
+@keyframes blink {
+0% {opacity: 1;}
+40% {opacity: 1;}
+60% {opacity: 0;}
+100% {opacity: 0;}
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+.wrapper {
+    opacity: 0; /* Initially hide the wrapper */
+    animation: fadeIn 1s ease forwards; /* Apply the animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* End with opacity 1 */
+    }
+}
+
+
+a {
+  text-decoration: none;
+  font-size: 1.3rem;
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+  background: #0a192f;
+  float: left;
+  margin-top: 1em;
+}
+.logo:hover {
+  color: #D0D33C;
+}
+
+nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: #0a192f;
+  height: 100vh;
+  width: 50%;
+  z-index: 999;
+  text-transform: lowercase;
+  transform: translateX(100%);
+  transition: transform 0.5s ease-in-out;
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 5em;
+}
+nav ul a {
+  color: white;
+  padding: 1em 3em;
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+}
+nav ul a:hover {
+  color: #64ffda;
+  transform: translateY(-5%);
+}
+nav .close {
+  float: right;
+  margin-top: 1.5em;
+  margin-right: 2.1em;
+  width: 1em;
+  cursor: pointer;
+}
+nav .close:hover {
+  transform: scale(1.1);
+}
+
+.open-nav {
+  transform: translateX(0%);
+}
+
+header {
+  top: 0;
+  height: 4em;
+  background: #0a192f;
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+}
+header .menu {
+  float: right;
+  width: 2em;
+  margin-right: 6.5em;
+  margin-top: 1.32em;
+  z-index: 20;
+  cursor: pointer;
+}
+header .menu:hover {
+  transform: scale(1.1);
+}
+
+.overlay {
+  display: none;
+}
+
+section.hero {
+  color: white;
+  height: 70vh;
+  -webkit-animation: moveDown 1s ease-in-out forwards;
+          animation: moveDown 1s ease-in-out forwards;
+}
+section.hero .hi {
+  font-size: 1.4rem;
+  margin-top: 13em; 
+  text-align: center;
+}
+
+.name::after {
+  content: '|'; /* Cursor */
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+
+section.hero .name {
+  margin-top: 0.5em;
+  font-size: 3rem;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 5em;
+}
+section.hero .desc {
+  display: none;
+  font-size: 10rem;
+}
+section.hero .desc2 {
+  color: #D0D33C;
+  font-size: 0.8rem;
+  margin-top: -1.2em;
+  text-align: center;
+}
+
+.profile-img {
+  height: auto;
+  border-radius: 10px; /* Adjust the radius to change the curve */
+  transition: transform 0.3s ease; /* Adding a smooth transition effect */
+}
+
+.profile-img:hover {
+  transform: scale(1.05); /* Increasing the size by 5% on hover */
+}
+
+
+section.about {
+  color: white;
+  text-align: center;
+  padding-top: 3em;
+  padding-bottom: 10em;
+}
+section.about .sectionhead {
+  margin: 0;
+  font-size: 1.2em;
+}
+section.about .daynight {
+  display: incline-block;
+  align-items: center;
+  text-align: left;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  margin-left: 20px;
+  font-size: 0.1rem;
+}
+
+section.about .daynight a {
+  all: unset;
+}
+section.about .daynight span {
+  color: #D0D33C;
+}
+section.about .daynight span:hover {
+  cursor: pointer;
+}
+section.about img {
+  display: incline-block;
+  width: 70%;
+  margin-top: 1em;
+  text-align: center;
+  margin-bottom: 2em;
+}
+section.about .content {
+  display: inline-block;
+  text-align: left;
+  font-size: 0.8rem;
+  line-height: 2em;
+  margin-left: 25px;
+}
+section.about .content .dotdot {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+section.about .content .list span {
+  color: #D0D33C;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background-color: black;
+  margin-left: 5px;
+  animation: blink 0.6s infinite alternate;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+section.experience {
+  color: white;
+  margin: auto;
+}
+section.experience a {
+  all: unset;
+}
+section.experience .sectionhead {
+  padding-top: 10px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+
+
+
+
+section.experience .topbar {
+  text-align: center;
+}
+section.experience .topbar .now {
+  font-size: 0.8rem;
+  color: #D0D33C;
+  display: inline-block;
+  position: absolute;
+  text-align: left;
+  margin-top: 12.6px;
+  margin-left: 29px;
+}
+section.experience .topbar ul {
+  display: inline-block;
+  list-style-type: none;
+  font-size: 0.8rem;
+  text-align: left;
+  margin-left: 45px;
+}
+section.experience .topbar ul li {
+  display: inline-block;
+}
+section.experience .topbar ul li span:hover {
+  color: #D0D33C;
+  cursor: pointer;
+}
+section.experience .divider {
+  display: inline-block;
+  width: 100%;
+}
+section.experience .tabbody {
+  padding-left: 30px;
+  margin: auto;
+  text-align: center;
+}
+section.experience .tabbody h2 {
+  text-align: left;
+  color: #D0D33C;
+  font-size: 0.9rem;
+  margin-bottom: 0.1em;
+}
+section.experience .tabbody p {
+  line-height: 1.7em;
+  text-align: left;
+  margin-top: 0;
+  font-size: 0.7rem;
+}
+section.experience .tabbody p span {
+  font-style: italic;
+  color: #a9b3b8;
+}
+section.experience .tabbody p span:hover {
+  color: #D0D33C;
+  cursor: pointer;
+}
+section.experience .tabbody p.green {
+  color: #53DA79;
+  font-style: italic;
+  margin-top: 0.7em !important;
+}
+section.experience .tabbody2 {
+  display: none;
+  padding-left: 30px;
+  margin: auto;
+  text-align: center;
+}
+section.experience .tabbody2 h2 {
+  text-align: left;
+  color: #D0D33C;
+  font-size: 0.9rem;
+  margin-bottom: 0.1em;
+}
+section.experience .tabbody2 p {
+  line-height: 1.7em;
+  text-align: left;
+  margin-top: 0;
+  font-size: 0.7rem;
+}
+section.experience .tabbody2 p span {
+  font-style: italic;
+  color: #a9b3b8;
+}
+section.experience .tabbody2 p span:hover {
+  color: #D0D33C;
+  cursor: pointer;
+}
+section.experience .tabbody2 p.green {
+  color: #53DA79;
+  font-style: italic;
+  margin-top: 0.7em !important;
+}
+section.experience .tabbody3 {
+  display: none;
+  padding-left: 30px;
+  margin: auto;
+  text-align: center;
+}
+section.experience .tabbody3 h2 {
+  text-align: left;
+  color: #D0D33C;
+  font-size: 0.9rem;
+  margin-bottom: 0.1em;
+}
+section.experience .tabbody3 p {
+  line-height: 1.7em;
+  text-align: left;
+  margin-top: 0;
+  font-size: 0.7rem;
+}
+section.experience .tabbody3 p span {
+  font-style: italic;
+  color: #a9b3b8;
+}
+section.experience .tabbody3 p span:hover {
+  color: #D0D33C;
+  cursor: pointer;
+}
+section.experience .tabbody3 p.green {
+  color: #53DA79;
+  font-style: italic;
+  margin-top: 0.7em !important;
+}
+section.experience .tabbody4 {
+  display: none;
+  padding-left: 30px;
+  margin: auto;
+  text-align: center;
+}
+section.experience .tabbody4 h2 {
+  text-align: left;
+  color: #D0D33C;
+  font-size: 0.9rem;
+  margin-bottom: 0.1em;
+}
+section.experience .tabbody4 p {
+  line-height: 1.7em;
+  text-align: left;
+  margin-top: 0;
+  font-size: 0.7rem;
+}
+section.experience .tabbody4 p span {
+  font-style: italic;
+  color: #a9b3b8;
+}
+section.experience .tabbody4 p span:hover {
+  color: #D0D33C;
+  cursor: pointer;
+}
+section.experience .tabbody4 p.green {
+  color: #53DA79;
+  font-style: italic;
+  margin-top: 0.7em !important;
+}
+section.experience .tabbody5 {
+  padding-left: 30px;
+  margin: auto;
+  text-align: center;
+}
+section.experience .tabbody5 h2 {
+  text-align: left;
+  color: #D0D33C;
+  font-size: 0.9rem;
+  margin-bottom: 0.1em;
+}
+section.experience .tabbody5 p {
+  line-height: 1.7em;
+  text-align: left;
+  margin-top: 0;
+  font-size: 0.7rem;
+}
+section.experience .tabbody5 p span {
+  font-style: italic;
+  color: #a9b3b8;
+}
+section.experience .tabbody5 p span:hover {
+  color: #D0D33C;
+  cursor: pointer;
+}
+section.experience .tabbody5 p.green {
+  color: #53DA79;
+  font-style: italic;
+  margin-top: 0.7em !important;
+}
+section.experience .tabbody6 {
+  display: none;
+  padding-left: 30px;
+  margin: auto;
+  text-align: center;
+}
+section.experience .tabbody6 h2 {
+  text-align: left;
+  color: #D0D33C;
+  font-size: 0.9rem;
+  margin-bottom: 0.1em;
+}
+section.experience .tabbody6 p {
+  line-height: 1.7em;
+  text-align: left;
+  margin-top: 0;
+  font-size: 0.7rem;
+}
+section.experience .tabbody6 p span {
+  font-style: italic;
+  color: #a9b3b8;
+}
+section.experience .tabbody6 p span:hover {
+  color: #D0D33C;
+  cursor: pointer;
+}
+section.experience .tabbody6 p.green {
+  color: #53DA79;
+  font-style: italic;
+  margin-top: 0.7em !important;
+}
+section.experience .tabbody7 {
+  display: none;
+  padding-left: 30px;
+  margin: auto;
+  text-align: center;
+}
+section.experience .tabbody7 h2 {
+  text-align: left;
+  color: #D0D33C;
+  font-size: 0.9rem;
+  margin-bottom: 0.1em;
+}
+section.experience .tabbody7 p {
+  line-height: 1.7em;
+  text-align: left;
+  margin-top: 0;
+  font-size: 0.7rem;
+}
+section.experience .tabbody7 p span {
+  font-style: italic;
+  color: #a9b3b8;
+}
+section.experience .tabbody7 p span:hover {
+  color: #D0D33C;
+  cursor: pointer;
+}
+section.experience .tabbody7 p.green {
+  color: #53DA79;
+  font-style: italic;
+  margin-top: 0.7em !important;
+}
+section.experience .tabbody8 {
+  display: none;
+  padding-left: 30px;
+  margin: auto;
+  text-align: center;
+}
+section.experience .tabbody8 h2 {
+  text-align: left;
+  color: #D0D33C;
+  font-size: 0.9rem;
+  margin-bottom: 0.1em;
+}
+section.experience .tabbody8 p {
+  line-height: 1.7em;
+  text-align: left;
+  margin-top: 0;
+  font-size: 0.7rem;
+}
+section.experience .tabbody8 p span {
+  font-style: italic;
+  color: #a9b3b8;
+}
+section.experience .tabbody8 p span:hover {
+  color: #D0D33C;
+  cursor: pointer;
+}
+section.experience .tabbody8 p.green {
+  color: #53DA79;
+  font-style: italic;
+  margin-top: 0.7em !important;
+}
+section.experience .tabbody9 {
+  display: none;
+  padding-left: 30px;
+  margin: auto;
+  text-align: center;
+}
+section.experience .tabbody9 h2 {
+  text-align: left;
+  color: #D0D33C;
+  font-size: 0.9rem;
+  margin-bottom: 0.1em;
+}
+section.experience .tabbody9 p {
+  line-height: 1.7em;
+  text-align: left;
+  margin-top: 0;
+  font-size: 0.7rem;
+}
+section.experience .tabbody9 p span {
+  font-style: italic;
+  color: #a9b3b8;
+}
+section.experience .tabbody9 p span:hover {
+  color: #D0D33C;
+  cursor: pointer;
+}
+section.experience .tabbody9 p.green {
+  color: #53DA79;
+  font-style: italic;
+  margin-top: 0.7em !important;
+}
+section.experience .botbar {
+  padding-top: 2em;
+  text-align: center;
+  padding-bottom: 1.2em;
+}
+section.experience .botbar .prev {
+  font-size: 0.8rem;
+  color: #D0D33C;
+  display: inline-block;
+  position: absolute;
+  text-align: left;
+  margin-top: 12.6px;
+  margin-left: 30px;
+}
+section.experience .botbar ul {
+  display: inline-block;
+  list-style-type: none;
+  font-size: 0.8rem;
+  text-align: left;
+  margin-left: 42px;
+}
+section.experience .botbar ul li {
+  display: inline-block;
+}
+section.experience .botbar ul li span:hover {
+  color: #D0D33C;
+  cursor: pointer;
+}
+
+section.portfolio {
+  color: white;
+  display: block;
+  width: 100%;
+  margin: auto;
+  text-align: center;
+}
+section.portfolio .sectionhead {
+  margin-top: 8em;
+  font-size: 1.2em;
+  text-align: center;
+}
+section.portfolio .container {
+  display: inline-block;
+}
+section.portfolio .container .menu {
+  display: block;
+  text-align: center;
+  margin-bottom: 0.8em;
+}
+section.portfolio .container .menu a {
+  color: white;
+  font-size: 1rem;
+}
+section.portfolio .container .menu a span:hover {
+  color: #D0D33C;
+  cursor: pointer;
+}
+section.portfolio .container .box {
+  padding-top: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center !important;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+section.portfolio .container .box a {
+  all: unset;
+}
+section.portfolio .container .box .store-item {
+  margin-top: -1em;
+  padding: 0.5rem;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+section.portfolio .container .box .store-item img {
+  position: absolute;
+  padding-top: 25px;
+  height: 80px;
+}
+section.portfolio .container .box .store-item img:hover {
+  cursor: pointer;
+}
+section.portfolio .container .box .store-item svg {
+  height: 140px;
+}
+section.portfolio .container .box .store-item p {
+  position: absolute;
+  padding-top: 100px;
+  font-size: 0.7rem;
+}
+section.portfolio .container .box .store-item p:hover {
+  color: #D0D33C;
+  cursor: pointer;
+}
+section.portfolio .container .box p {
+  margin-top: 2em;
+  font-size: 0.8rem;
+}
+section.portfolio .container .box p a {
+  font-size: 0.8rem;
+  color: #D0D33C;
+}
+section.portfolio .container .box p a:hover {
+  color: #D0D33C;
+  cursor: pointer;
+}
+
+section.thanks {
+  display: block;
+  margin: auto;
+  margin-top: 15em;
+  text-align: center;
+}
+section.thanks .sectionhead {
+  margin: 2em;
+  margin-top: 8em;
+  font-size: 1em;
+  text-align: center;
+}
+section.thanks .sectionhead a {
+  all: unset;
+  color: #D0D33C;
+}
+section.thanks .sectionhead a:hover {
+  color: #D0D33C;
+  cursor: pointer;
+}
+section.thanks .sectionhead p {
+  margin-bottom: 4em;
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #a9b3b8;
+}
+section.thanks .houses {
+  padding-right: 15px;
+  display: none;
+  text-align: center;
+}
+section.thanks .houses pre {
+  text-align: center;
+}
+section.thanks .phonehouse {
+  display: inline-block;
+}
+section.thanks .phonehouse pre {
+  text-align: center;
+}
+section.thanks .phonehouse a {
+  all: unset;
+}
+section.thanks .phonehouse svg {
+  margin-top: -30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  height: 20px;
+  margin-bottom: 60px;
+}
+section.thanks .phonehouse svg:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+section.thanks .madeby {
+  margin-top: 2em;
+}
+section.thanks .madeby p {
+  font-size: 0.7rem;
+}
+section.thanks .madeby p span {
+  color: rgb(219, 84, 84);
+}
+
+@media only screen and (min-width: 940px) {
+  .overlay {
+    display: block;
+    position: fixed;
+    width: 100%;
+    top: 80%;
+  }
+  .overlay .leftside {
+    position: fixed;
+    top: 84.5%;
+    left: 2%;
+  }
+  .overlay .leftside a {
+    all: unset;
+  }
+  .overlay .leftside .twitter {
+    position: absolute;
+    top: -200%;
+    left: 0%;
+    height: 2.1em;
+  }
+  .overlay .leftside .twitter:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .overlay .leftside .linkedin {
+    position: absolute;
+    top: -160%;
+    left: 2px;
+    height: 1.9em;
+  }
+  .overlay .leftside .linkedin:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .overlay .leftside .github {
+    position: absolute;
+    top: -120%;
+    left: 0%;
+    height: 2em;
+  }
+  .overlay .leftside .github:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .overlay .leftside .insta {
+    position: absolute;
+    top: -80%;
+    left: 0%;
+    height: 2em;
+  }
+  .overlay .leftside .insta:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .overlay .leftside .facebook {
+    position: absolute;
+    top: -40%;
+    left: 0;
+    height: 2.1em;
+  }
+  .overlay .leftside .facebook:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  .overlay .leftside .leftline {
+    float: left;
+    width: 1.8em;
+    left: 1px;
+    height: 9em;
+  }
+  .overlay .rightside {
+    right: 2%;
+    top: 84.5%;
+    position: fixed;
+  }
+  .overlay .rightside .email {
+    position: absolute;
+    bottom: 180%;
+    right: -320%;
+    color: #D0D33C;
+    font-size: 1rem;
+    transform: rotate(90deg);
+  }
+  .overlay .rightside .email:hover {
+    color: white;
+    cursor: pointer;
+  }
+  .overlay .rightside .hiddendiv {
+    display: none;
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 180%;
+    right: 50%;
+    color: white;
+    float: right;
+    transform: rotate(90deg);
+    z-index: 5;
+  }
+  .overlay .rightside .email:focus + .hiddendiv {
+    display: block;
+  }
+  .overlay .rightside .rightline {
+    float: right;
+    width: 2em;
+    height: 9em;
+    right: 2em;
+  }
+  .menu {
+    display: none;
+  }
+  nav {
+    transform: translateX(0);
+    position: unset;
+    display: block;
+    width: auto;
+    height: auto;
+    background: none;
+  }
+  nav svg.close {
+    display: none;
+  }
+  nav ul {
+    float: right;
+    display: flex;
+    margin: 0;
+    margin-right: 5.4em;
+  }
+  nav ul a {
+    color: white;
+    padding: 1.9em 0.9em;
+    font-size: 0.9rem;
+  }
+  nav ul a:hover {
+    background: none;
+    transform: scale(1);
+  }
+  section.hero {
+    color: white;
+    height: 70vh;
+    text-align: center;
+    margin-bottom: 14em;
+  }
+  section.hero .hi {
+    display: inline-block;
+    width: 398px;
+    font-size: 1.4rem;
+    margin-top: 15em;
+    text-align: left;
+  }
+  section.hero .name {
+    margin-top: -0.5em;
+    font-size: 3rem;
+    text-align: center;
+  }
+  /*for the intro text below introduction*/
+  section.hero .desc {
+    display: block;
+    color: #ccd6f6;
+    font-size: 1.1rem;
+    line-height: 2rem;
+    margin-top: -1.2em;
+    text-align: center;
+  }
+  section.hero .desc2 {
+    display: none;
+  }
+  section.hero .arrow {
+    display: none;
+    animation: moveArrow 1s alternate-reverse infinite;
+    position: unset;
+    margin-top: 16em;
+    height: 3vh;
+    margin-bottom: 4em;
+  }
+  section.about {
+    color: white;
+    height: 70vh;
+    text-align: center;
+    -webkit-padding-start: 30%;
+            padding-inline-start: 30%;
+    -webkit-padding-end: 30%;
+            padding-inline-end: 30%;
+    font-size: 20px;
+  }
+  section.about .sectionhead {
+    margin: 0;
+    font-size: 1.2em;
+  }
+  section.about .daynight {
+    display: inline-block;
+    text-align: left;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    font-size: 1.5rem;
+  }
+  section.about .daynight span {
+    color: #D0D33C;
+  }
+  section.about img {
+    display: inline-block;
+    height: 50%;
+    width: auto;
+    margin-top: 1em;
+    text-align: center;
+    margin-bottom: 2em;
+  }
+  section.about .content {
+    display: inline-block;
+    text-align: left;
+    font-size: 0.8rem;
+    line-height: 2em;
+  }
+  section.about .content .dotdot {
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  section.about .content .list {
+    margin-left: 1em;
+  }
+  section.about .content .list span {
+    color: #D0D33C;
+  }
+  section.experience {
+    color: white;
+    margin: auto;
+  }
+  section.experience a {
+    all: unset;
+  }
+  section.experience .sectionhead {
+    margin: 2em;
+    margin-top: 8em;
+    font-size: 1.2em;
+    text-align: center;
+  }
+  section.experience .topbar {
+    padding-top: 2em;
+    text-align: center;
+  }
+  section.experience .topbar .now {
+    color: #D0D33C;
+    display: inline-block;
+    width: 20px;
+    position: static;
+    font-size: 1rem;
+    text-align: left;
+    margin-top: 10px;
+    margin-left: 1px;
+  }
+  section.experience .topbar ul {
+    width: 656.5px;
+    display: inline-block;
+    list-style-type: none;
+    font-size: 1rem;
+    text-align: left;
+    margin-left: 31px;
+  }
+  section.experience .topbar ul li {
+    display: inline-block;
+  }
+  section.experience .topbar ul li span:hover {
+    color: #D0D33C;
+    cursor: pointer;
+  }
+  section.experience .divider {
+    display: inline-block;
+    width: 100%;
+  }
+  section.experience .tabbody {
+    padding-left: 0;
+    width: 722px;
+    margin: auto;
+    text-align: left;
+  }
+  section.experience .tabbody h2 {
+    display: block;
+    margin-left: 85px;
+    color: #D0D33C;
+    font-size: 1rem;
+    margin-bottom: 0.1em;
+  }
+  section.experience .tabbody p {
+    line-height: 1.7em;
+    margin-left: 85px;
+    margin-top: 0;
+    font-size: 0.8rem;
+  }
+  section.experience .tabbody p span {
+    font-style: italic;
+    color: #f3f169;
+  }
+  section.experience .tabbody p span:hover {
+    color: #D0D33C;
+    cursor: pointer;
+  }
+  section.experience .tabbody p.green {
+    color: #53DA79;
+    font-style: italic;
+    margin-top: 0.7em !important;
+  }
+  section.experience .tabbody2 {
+    display: none;
+    width: 722px;
+    padding-left: 0;
+    margin: auto;
+    text-align: left;
+  }
+  section.experience .tabbody2 h2 {
+    display: block;
+    margin-left: 85px;
+    color: #D0D33C;
+    font-size: 1rem;
+    margin-bottom: 0.1em;
+  }
+  section.experience .tabbody2 p {
+    line-height: 1.7em;
+    margin-left: 85px;
+    margin-top: 0;
+    font-size: 0.8rem;
+  }
+  section.experience .tabbody2 p span {
+    font-style: italic;
+    color: #a9b3b8;
+  }
+  section.experience .tabbody2 p span:hover {
+    color: #D0D33C;
+    cursor: pointer;
+  }
+  section.experience .tabbody2 p.green {
+    color: #53DA79;
+    font-style: italic;
+    margin-top: 0.7em !important;
+  }
+  section.experience .tabbody3 {
+    width: 722px;
+    margin: auto;
+    padding-left: 0;
+    text-align: left;
+    display: none;
+  }
+  section.experience .tabbody3 h2 {
+    display: block;
+    margin-left: 85px;
+    color: #D0D33C;
+    font-size: 1rem;
+    margin-bottom: 0.1em;
+  }
+  section.experience .tabbody3 p {
+    line-height: 1.7em;
+    margin-left: 85px;
+    margin-top: 0;
+    font-size: 0.8rem;
+  }
+  section.experience .tabbody3 p span {
+    font-style: italic;
+    color: #a9b3b8;
+  }
+  section.experience .tabbody3 p span:hover {
+    color: #D0D33C;
+    cursor: pointer;
+  }
+  section.experience .tabbody3 p.green {
+    color: #53DA79;
+    font-style: italic;
+    margin-top: 0.7em !important;
+  }
+  section.experience .tabbody4 {
+    width: 722px;
+    margin: auto;
+    padding-left: 0;
+    text-align: left;
+    display: none;
+  }
+  section.experience .tabbody4 h2 {
+    display: block;
+    margin-left: 85px;
+    color: #D0D33C;
+    font-size: 1rem;
+    margin-bottom: 0.1em;
+  }
+  section.experience .tabbody4 p {
+    line-height: 1.7em;
+    margin-left: 85px;
+    margin-top: 0;
+    font-size: 0.8rem;
+  }
+  section.experience .tabbody4 p span {
+    font-style: italic;
+    color: #a9b3b8;
+  }
+  section.experience .tabbody4 p span:hover {
+    color: #D0D33C;
+    cursor: pointer;
+  }
+  section.experience .tabbody4 p.green {
+    color: #53DA79;
+    font-style: italic;
+    margin-top: 0.7em !important;
+  }
+  section.experience .tabbody5 {
+    width: 722px;
+    margin: auto;
+    padding-left: 0;
+    text-align: left;
+  }
+  section.experience .tabbody5 h2 {
+    display: block;
+    margin-left: 85px;
+    color: #D0D33C;
+    font-size: 1rem;
+    margin-bottom: 0.1em;
+  }
+  section.experience .tabbody5 p {
+    line-height: 1.7em;
+    margin-left: 85px;
+    margin-top: 0;
+    font-size: 0.8rem;
+  }
+  section.experience .tabbody5 p span {
+    font-style: italic;
+    color: #a9b3b8;
+  }
+  section.experience .tabbody5 p span:hover {
+    color: #D0D33C;
+    cursor: pointer;
+  }
+  section.experience .tabbody5 p.green {
+    color: #53DA79;
+    font-style: italic;
+    margin-top: 0.7em !important;
+  }
+  section.experience .tabbody6 {
+    width: 722px;
+    margin: auto;
+    text-align: left;
+    padding-left: 0;
+    display: none;
+  }
+  section.experience .tabbody6 h2 {
+    display: block;
+    margin-left: 85px;
+    color: #D0D33C;
+    font-size: 1rem;
+    margin-bottom: 0.1em;
+  }
+  section.experience .tabbody6 p {
+    line-height: 1.7em;
+    margin-left: 85px;
+    margin-top: 0;
+    font-size: 0.8rem;
+  }
+  section.experience .tabbody6 p span {
+    font-style: italic;
+    color: #a9b3b8;
+  }
+  section.experience .tabbody6 p span:hover {
+    color: #D0D33C;
+    cursor: pointer;
+  }
+  section.experience .tabbody6 p.green {
+    color: #53DA79;
+    font-style: italic;
+    margin-top: 0.7em !important;
+  }
+  section.experience .tabbody7 {
+    width: 722px;
+    margin: auto;
+    text-align: left;
+    padding-left: 0;
+    display: none;
+  }
+  section.experience .tabbody7 h2 {
+    display: block;
+    margin-left: 85px;
+    color: #D0D33C;
+    font-size: 1rem;
+    margin-bottom: 0.1em;
+  }
+  section.experience .tabbody7 p {
+    line-height: 1.7em;
+    margin-left: 85px;
+    margin-top: 0;
+    font-size: 0.8rem;
+  }
+  section.experience .tabbody7 p span {
+    font-style: italic;
+    color: #a9b3b8;
+  }
+  section.experience .tabbody7 p span:hover {
+    color: #D0D33C;
+    cursor: pointer;
+  }
+  section.experience .tabbody7 p.green {
+    color: #53DA79;
+    font-style: italic;
+    margin-top: 0.7em !important;
+  }
+  section.experience .tabbody8 {
+    width: 722px;
+    margin: auto;
+    padding-left: 0;
+    text-align: left;
+    display: none;
+  }
+  section.experience .tabbody8 h2 {
+    display: block;
+    margin-left: 85px;
+    color: #D0D33C;
+    font-size: 1rem;
+    margin-bottom: 0.1em;
+  }
+  section.experience .tabbody8 p {
+    line-height: 1.7em;
+    margin-left: 85px;
+    margin-top: 0;
+    font-size: 0.8rem;
+  }
+  section.experience .tabbody8 p span {
+    font-style: italic;
+    color: #a9b3b8;
+  }
+  section.experience .tabbody8 p span:hover {
+    color: #D0D33C;
+    cursor: pointer;
+  }
+  section.experience .tabbody8 p.green {
+    color: #53DA79;
+    font-style: italic;
+    margin-top: 0.7em !important;
+  }
+  section.experience .tabbody9 {
+    width: 722px;
+    margin: auto;
+    padding-left: 0;
+    text-align: left;
+    display: none;
+  }
+  section.experience .tabbody9 h2 {
+    display: block;
+    margin-left: 85px;
+    color: #D0D33C;
+    font-size: 1rem;
+    margin-bottom: 0.1em;
+  }
+  section.experience .tabbody9 p {
+    line-height: 1.7em;
+    margin-left: 85px;
+    margin-top: 0;
+    font-size: 0.8rem;
+  }
+  section.experience .tabbody9 p span {
+    font-style: italic;
+    color: #a9b3b8;
+  }
+  section.experience .tabbody9 p span:hover {
+    color: #D0D33C;
+    cursor: pointer;
+  }
+  section.experience .tabbody9 p.green {
+    color: #53DA79;
+    font-style: italic;
+    margin-top: 0.7em !important;
+  }
+  section.experience .botbar {
+    padding-top: 2em;
+    text-align: center;
+    padding-bottom: 1.2em;
+  }
+  section.experience .botbar .prev {
+    width: 100%;
+    color: #D0D33C;
+    display: inline-block;
+    width: 20px;
+    position: static;
+    font-size: 1rem;
+    position: static;
+    text-align: left;
+    margin-top: -0.575px;
+    margin-left: 50px;
+  }
+  section.experience .botbar ul {
+    width: 700px;
+    margin-left: -5px;
+    padding-left: 72px;
+    display: inline-block;
+    list-style-type: none;
+    font-size: 1rem;
+    text-align: left;
+  }
+  section.experience .botbar ul li {
+    display: inline-block;
+  }
+  section.experience .botbar ul li span:hover {
+    color: #D0D33C;
+    cursor: pointer;
+  }
+  section.portfolio {
+    color: white;
+    display: block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  section.portfolio .sectionhead {
+    margin: 2em;
+    margin-top: 8em;
+    font-size: 1.2em;
+    text-align: center;
+  }
+  section.portfolio .container {
+    display: inline-block;
+    width: 900px;
+  }
+  section.portfolio .container .menu {
+    display: block;
+    text-align: center;
+    margin-bottom: 0.8em;
+  }
+  section.portfolio .container .menu a {
+    color: white;
+    font-size: 1rem;
+  }
+  section.portfolio .container .menu a span:hover {
+    color: #D0D33C;
+    cursor: pointer;
+  }
+  section.portfolio .container .box {
+    padding-top: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center !important;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  section.portfolio .container .box a {
+    all: unset;
+  }
+  section.portfolio .container .box .store-item {
+    margin-top: -1em;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  section.portfolio .container .box .store-item img {
+    position: absolute;
+    padding-top: 25px;
+    height: 120px;
+  }
+  section.portfolio .container .box .store-item img:hover {
+    cursor: pointer;
+  }
+  section.portfolio .container .box .store-item svg {
+    height: 220px;
+  }
+  section.portfolio .container .box .store-item p {
+    position: absolute;
+    padding-top: 150px;
+    font-size: 0.7rem;
+  }
+  section.portfolio .container .box .store-item p:hover {
+    color: #D0D33C;
+    cursor: pointer;
+  }
+  section.portfolio .container .box p {
+    margin-top: 2em;
+    font-size: 0.8rem;
+  }
+  section.portfolio .container .box p a {
+    font-size: 0.8rem;
+    color: #D0D33C;
+  }
+  section.portfolio .container .box p a:hover {
+    color: #D0D33C;
+    cursor: pointer;
+  }
+  section.thanks {
+    display: block;
+    margin: auto;
+    margin-top: 15em;
+    text-align: center;
+  }
+  section.thanks .sectionhead {
+    margin: 2em;
+    margin-top: 8em;
+    font-size: 1em;
+    text-align: center;
+  }
+  section.thanks .sectionhead a {
+    all: unset;
+  }
+  section.thanks .sectionhead a:hover {
+    color: #D0D33C;
+    cursor: pointer;
+  }
+  section.thanks .sectionhead p {
+    margin-bottom: 4em;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #a9b3b8;
+  }
+  section.thanks .houses {
+    padding-right: 15px;
+    display: inline-block;
+    text-align: center;
+  }
+  section.thanks .houses pre {
+    text-align: center;
+  }
+  section.thanks .phonehouse {
+    visibility: hidden;
+    display: none;
+  }
+  section.thanks .phonehouse svg {
+    display: none;
+  }
+  section.thanks .madeby {
+    margin-top: 2em;
+  }
+  section.thanks .madeby p {
+    font-size: 0.7rem;
+  }
+  section.thanks .madeby p span {
+    color: rgb(219, 84, 84);
+  }
+}
+@-webkit-keyframes moveArrow {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@keyframes moveArrow {
+  from {
+    transform: translateY(-20px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+@-webkit-keyframes moveDown {
+  from {
+    transform: translateY(-150px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes moveDown {
+  from {
+    transform: translateY(-150px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=main.css.map */

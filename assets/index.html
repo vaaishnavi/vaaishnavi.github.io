@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="I'm an 18 year old student in CS at UofT who's passionate about brain-computer interfaces, AI, and VR.">
+
+        <title>Vaishnavi Manivannan</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+        <link rel="manifest" href="assets/site.webmanifest">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,500;0,700;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header>
+                <a href="#" class="logo">@vaishnavimanivannan</a>
+                <nav>
+                    <svg class="close" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M195.2 195.2C207.202 183.202 223.477 176.462 240.448 176.462C257.419 176.462 273.694 183.202 285.696 195.2L512 421.504L738.304 195.2C750.375 183.542 766.541 177.091 783.322 177.237C800.102 177.383 816.154 184.113 828.02 195.98C839.887 207.846 846.617 223.898 846.763 240.678C846.909 257.459 840.458 273.625 828.8 285.696L602.496 512L828.8 738.304C840.458 750.375 846.909 766.541 846.763 783.322C846.617 800.102 839.887 816.154 828.02 828.02C816.154 839.887 800.102 846.617 783.322 846.763C766.541 846.909 750.375 840.458 738.304 828.8L512 602.496L285.696 828.8C273.625 840.458 257.459 846.909 240.678 846.763C223.898 846.617 207.846 839.887 195.98 828.02C184.113 816.154 177.383 800.102 177.237 783.322C177.091 766.541 183.542 750.375 195.2 738.304L421.504 512L195.2 285.696C183.202 273.694 176.462 257.419 176.462 240.448C176.462 223.477 183.202 207.202 195.2 195.2V195.2Z" fill="white"/>
+                    </svg>
+
+
+                    <ul>
+                        <li><a href="#">.home()</a></li>
+                        <li><a href="#about">.about()</a></li>
+                        <li><a href="#exp">.experience()</a></li>
+                        <li><a href="#port">.portfolio()</a></li>
+                    </ul>
+                </nav>
+
+                <svg class="menu" viewBox="0 0 47 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.83325 11.5H39.1666V15.3333H7.83325V11.5ZM7.83325 21.0833H39.1666V24.9167H7.83325V21.0833ZM7.83325 30.6667H39.1666V34.5H7.83325V30.6667Z" fill="white"/>
+                </svg> 
+            </header>
+
+            <div class="overlay">
+                <div class="leftside">
+                    <a href="https://twitter.com/VaishnaviMani18"><svg class="twitter" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.3564 26.6667H11.2498C9.10091 26.6479 6.98313 26.1514 5.04977 25.2133C4.69413 25.0463 4.40131 24.7698 4.21417 24.4243C4.02703 24.0788 3.9554 23.6825 4.00977 23.2933C4.06889 22.9016 4.25028 22.5385 4.52804 22.2559C4.8058 21.9734 5.16573 21.7858 5.55643 21.72C6.75458 21.5602 7.90721 21.1563 8.9431 20.5333C7.14465 19.1272 5.7601 17.2608 4.93619 15.1318C4.11228 13.0027 3.8797 10.6905 4.2631 8.44001C4.31508 8.08354 4.46838 7.74952 4.70476 7.47769C4.94114 7.20585 5.25064 7.00765 5.59643 6.90667C5.93285 6.80102 6.29289 6.7965 6.63186 6.89369C6.97082 6.99088 7.27377 7.18548 7.5031 7.45334C8.28177 8.47439 9.26029 9.32609 10.379 9.95649C11.4977 10.5869 12.733 10.9828 14.0098 11.12C14.0708 9.54914 14.7458 8.06496 15.8898 6.98667C16.461 6.43971 17.1353 6.01189 17.8735 5.72815C18.6117 5.44441 19.399 5.31043 20.1895 5.33401C20.98 5.35759 21.7579 5.53826 22.4779 5.86549C23.1979 6.19272 23.8455 6.65997 24.3831 7.24001C24.5232 7.36383 24.6972 7.44274 24.8826 7.46652C25.068 7.49029 25.2563 7.45783 25.4231 7.37334C25.741 7.2234 26.095 7.16696 26.4438 7.2106C26.7926 7.25424 27.1217 7.39616 27.3929 7.6198C27.6641 7.84344 27.866 8.13959 27.9753 8.47368C28.0845 8.80777 28.0965 9.16604 28.0098 9.50667C27.7022 10.7735 27.1196 11.9571 26.3031 12.9733C26.1231 16.7663 24.4509 20.3344 21.651 22.8995C18.8511 25.4646 15.1507 26.8188 11.3564 26.6667ZM11.3564 24H11.4631C13.0133 24.0533 14.5587 23.7984 16.0097 23.25C17.4606 22.7016 18.7883 21.8706 19.9157 20.8052C21.0431 19.7398 21.9478 18.4612 22.5773 17.0436C23.2069 15.6259 23.5487 14.0974 23.5831 12.5467C23.6051 12.1217 23.7804 11.7191 24.0764 11.4133C24.4016 11.0017 24.679 10.5544 24.9031 10.08C24.4228 10.0809 23.9476 9.98045 23.5088 9.78515C23.07 9.58985 22.6773 9.30414 22.3564 8.94667C22.0479 8.64075 21.6814 8.39944 21.2785 8.23689C20.8755 8.07434 20.4442 7.99381 20.0098 8.00001C19.571 7.98866 19.1342 8.06409 18.7247 8.22197C18.3151 8.37985 17.9408 8.61707 17.6231 8.92001C17.1945 9.32667 16.8803 9.83876 16.7118 10.405C16.5434 10.9713 16.5265 11.5719 16.6631 12.1467L17.0098 13.6667L15.4498 13.7733C13.8512 13.9037 12.2435 13.685 10.7378 13.1325C9.23212 12.5799 7.86454 11.7067 6.72977 10.5733C6.6811 12.3285 7.12017 14.0628 7.99816 15.5834C8.87615 17.104 10.1587 18.3513 11.7031 19.1867L12.9698 19.9067L12.1298 21.1067C11.2214 22.298 9.97668 23.1897 8.55643 23.6667C9.46752 23.895 10.4039 24.007 11.3431 24H11.3564Z" fill="#D0D33C"/>
+                    </svg> </a>
+                    <a href="https://www.linkedin.com/in/vaishnavi-manivannan-45086a196/"><svg class="linkedin" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.0098 8.00299C17.6011 8.00299 19.1272 8.63513 20.2524 9.76035C21.3776 10.8856 22.0098 12.4117 22.0098 14.003V21.003H18.0098V14.003C18.0098 13.4726 17.7991 12.9639 17.424 12.5888C17.0489 12.2137 16.5402 12.003 16.0098 12.003C15.4793 12.003 14.9706 12.2137 14.5956 12.5888C14.2205 12.9639 14.0098 13.4726 14.0098 14.003V21.003H10.0098V14.003C10.0098 12.4117 10.6419 10.8856 11.7671 9.76035C12.8923 8.63513 14.4185 8.00299 16.0098 8.00299V8.00299ZM2.00977 9.00299H6.00977V21.003H2.00977V9.00299Z" stroke="#D0D33C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.00977 6.00299C5.11434 6.00299 6.00977 5.10756 6.00977 4.00299C6.00977 2.89842 5.11434 2.00299 4.00977 2.00299C2.9052 2.00299 2.00977 2.89842 2.00977 4.00299C2.00977 5.10756 2.9052 6.00299 4.00977 6.00299Z" stroke="#D0D33C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></a>
+                    <a href="https://github.com/vaishnavimanivannan18"><svg class="github" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.61499 21.381C9.61499 21.381 8.86499 18.381 10.365 16.881C10.365 16.881 7.36499 16.881 5.11499 14.631C2.86499 12.381 3.61499 7.88098 5.11499 6.38098C4.36499 4.13098 5.86499 2.63098 5.86499 2.63098C5.86499 2.63098 8.11499 2.63098 9.61499 4.13098C11.115 3.38098 14.865 3.38098 16.365 4.13098C17.865 2.63098 20.115 2.63098 20.115 2.63098C20.115 2.63098 21.615 4.13098 20.865 6.38098C22.365 7.88098 23.115 12.381 20.865 14.631C18.615 16.881 15.615 16.881 15.615 16.881C17.115 18.381 16.365 21.381 16.365 21.381M8.86499 20.631C6.61499 21.381 4.36499 19.881 3.61499 19.131" stroke="#D0D33C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></a>
+                    <a href="https://www.instagram.com/c0uchhpotatoo/"><svg class="insta" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.12003 1.07497C9.29303 1.02097 9.66703 1.00897 12.655 1.00897C15.643 1.00897 16.017 1.02197 17.189 1.07497C18.361 1.12797 19.161 1.31497 19.861 1.58597C20.594 1.86297 21.259 2.29597 21.809 2.85597C22.369 3.40497 22.801 4.06897 23.077 4.80297C23.349 5.50297 23.535 6.30297 23.589 7.47297C23.643 8.64797 23.655 9.02197 23.655 12.009C23.655 14.997 23.642 15.371 23.589 16.544C23.536 17.714 23.349 18.514 23.077 19.214C22.801 19.9481 22.3683 20.6132 21.809 21.163C21.259 21.723 20.594 22.155 19.861 22.431C19.161 22.703 18.361 22.889 17.191 22.943C16.017 22.997 15.643 23.009 12.655 23.009C9.66703 23.009 9.29303 22.996 8.12003 22.943C6.95003 22.89 6.15003 22.703 5.45003 22.431C4.71595 22.1549 4.05085 21.7222 3.50103 21.163C2.94141 20.6136 2.50834 19.9489 2.23203 19.215C1.96103 18.515 1.77503 17.715 1.72103 16.545C1.66703 15.37 1.65503 14.996 1.65503 12.009C1.65503 9.02097 1.66803 8.64697 1.72103 7.47497C1.77403 6.30297 1.96103 5.50297 2.23203 4.80297C2.50875 4.06905 2.94215 3.40429 3.50203 2.85497C4.05107 2.29547 4.7155 1.86242 5.44903 1.58597C6.14903 1.31497 6.94903 1.12897 8.11903 1.07497H8.12003ZM17.1 3.05497C15.94 3.00197 15.592 2.99097 12.655 2.99097C9.71803 2.99097 9.37003 3.00197 8.21003 3.05497C7.13703 3.10397 6.55503 3.28297 6.16703 3.43397C5.65403 3.63397 5.28703 3.87097 4.90203 4.25597C4.53707 4.61102 4.25621 5.04325 4.08003 5.52097C3.92903 5.90897 3.75003 6.49097 3.70103 7.56397C3.64803 8.72397 3.63703 9.07197 3.63703 12.009C3.63703 14.946 3.64803 15.294 3.70103 16.454C3.75003 17.527 3.92903 18.109 4.08003 18.497C4.25603 18.974 4.53703 19.407 4.90203 19.762C5.25703 20.127 5.69003 20.408 6.16703 20.584C6.55503 20.735 7.13703 20.914 8.21003 20.963C9.37003 21.016 9.71703 21.027 12.655 21.027C15.593 21.027 15.94 21.016 17.1 20.963C18.173 20.914 18.755 20.735 19.143 20.584C19.656 20.384 20.023 20.147 20.408 19.762C20.773 19.407 21.054 18.974 21.23 18.497C21.381 18.109 21.56 17.527 21.609 16.454C21.662 15.294 21.673 14.946 21.673 12.009C21.673 9.07197 21.662 8.72397 21.609 7.56397C21.56 6.49097 21.381 5.90897 21.23 5.52097C21.03 5.00797 20.793 4.64097 20.408 4.25597C20.053 3.89104 19.6207 3.61018 19.143 3.43397C18.755 3.28297 18.173 3.10397 17.1 3.05497ZM11.25 15.4C12.0347 15.7266 12.9084 15.7707 13.722 15.5247C14.5355 15.2787 15.2384 14.7579 15.7106 14.0512C16.1829 13.3445 16.3951 12.4958 16.3111 11.6501C16.2271 10.8043 15.852 10.0139 15.25 9.41397C14.8663 9.03045 14.4022 8.73678 13.8914 8.55412C13.3805 8.37145 12.8355 8.30433 12.2955 8.35759C11.7556 8.41084 11.2342 8.58315 10.7688 8.8621C10.3035 9.14106 9.90577 9.51972 9.60433 9.97082C9.30289 10.4219 9.10522 10.9343 9.02555 11.4709C8.94587 12.0076 8.98618 12.5553 9.14357 13.0745C9.30096 13.5937 9.57151 14.0716 9.93575 14.4737C10.3 14.8758 10.7489 15.1922 11.25 15.4ZM8.65703 8.01097C9.18205 7.48595 9.80535 7.06948 10.4913 6.78533C11.1773 6.50119 11.9125 6.35495 12.655 6.35495C13.3975 6.35495 14.1328 6.50119 14.8187 6.78533C15.5047 7.06947 16.128 7.48595 16.653 8.01097C17.1781 8.536 17.5945 9.15929 17.8787 9.84527C18.1628 10.5312 18.3091 11.2665 18.3091 12.009C18.3091 12.7515 18.1628 13.4867 17.8787 14.1727C17.5945 14.8587 17.1781 15.4819 16.653 16.007C15.5927 17.0673 14.1546 17.663 12.655 17.663C11.1555 17.663 9.71736 17.0673 8.65703 16.007C7.59669 14.9466 7.001 13.5085 7.001 12.009C7.001 10.5094 7.59669 9.07131 8.65703 8.01097ZM19.563 7.19697C19.6931 7.07424 19.7973 6.92665 19.8693 6.76295C19.9414 6.59924 19.9798 6.42274 19.9824 6.2439C19.9851 6.06506 19.9518 5.88752 19.8845 5.72178C19.8173 5.55604 19.7175 5.40548 19.591 5.27901C19.4645 5.15254 19.314 5.05273 19.1482 4.98549C18.9825 4.91825 18.8049 4.88495 18.6261 4.88756C18.4473 4.89016 18.2708 4.92863 18.1071 5.00067C17.9433 5.07271 17.7958 5.17687 17.673 5.30697C17.4343 5.56 17.3037 5.89609 17.3087 6.2439C17.3138 6.59171 17.4542 6.92385 17.7002 7.16982C17.9461 7.41578 18.2783 7.5562 18.6261 7.56127C18.9739 7.56634 19.31 7.43566 19.563 7.19697Z" fill="#D0D33C"/>
+                    </svg> </a>
+                    <a href="https://www.facebook.com/"><svg class="facebook" viewBox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24.0723 3.07446H3.94727C3.46328 3.07446 3.07227 3.46548 3.07227 3.94946V24.0745C3.07227 24.5584 3.46328 24.9495 3.94727 24.9495H24.0723C24.5562 24.9495 24.9473 24.5584 24.9473 24.0745V3.94946C24.9473 3.46548 24.5562 3.07446 24.0723 3.07446ZM23.1973 23.1995H18.1633V16.4784H21.007L21.4336 13.178H18.1633V11.0698C18.1633 10.1127 18.4285 9.46196 19.7984 9.46196H21.5457V6.50884C21.2422 6.46782 20.2059 6.37759 18.9973 6.37759C16.4762 6.37759 14.7508 7.91704 14.7508 10.7417V13.1752H11.9016V16.4756H14.7535V23.1995H4.82227V4.82446H23.1973V23.1995Z" fill="#D0D33C"/>
+                    </svg> </a>
+                    <svg class="leftline" viewBox="0 0 3 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="1.98999" y1="134.005" x2="1.98999" y2="0.00335693" stroke="#D0D33C" stroke-width="2"/>
+                    </svg>                                                                   
+                </div>
+                <div class="rightside">
+                    <p class="email" tabindex="1">vmanivannan33@gatech.edu</p>
+                    <div class="hiddendiv"><p>copied!</p></div>
+                    <svg class="rightline" viewBox="0 0 3 135" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <line x1="1.77148" y1="134.002" x2="1.77148" y2="0.000183105" stroke="#D0D33C" stroke-width="2"/>
+                    </svg>   
+                </div>
+            </div>
+
+            <section class="hero">
+              
+                 <h1 class="name">hi, <span style="color: #a6acec;">Vaishnavi</span> here.</h1>
+
+                <p class="desc">I'm a 19 year old Georgia Tech Computer Science student  
+                  <br> pursuing the info-internetworks + intelligence threads. 
+                  <br> I'm a developer and designer leveraging big data, AI
+                  <br> and engineering to create equitable high-impact products.
+                </p>
+
+                <div class="container-typing" style="font-size: 20px; margin-top: 60px">
+                  <span id="sentence" class="sentence">Currently, I'm </span>
+                  <span id="text-feature"></span>
+                  <span class="cursor-input"></span>
+                </div>
+              
+              <style>
+                
+                .desc {
+                    margin-bottom: 20px;
+                    color: white;
+                    padding-top: 300px;
+                    line-height: 5px;
+                    padding-bottom: 5px;
+                } 
+              </style>
+
+              <button class="button-30" role="button"><a href="https://drive.google.com/file/d/1Yg6s3J2LSaeuGwAxa3tOU6Uli1G_jh5u/view?usp=sharing">Resume</a></button>
+              <style>
+                .button-30 {
+                  align-items: center;
+                  appearance: none;
+                  background-color: #FCFCFD;
+                  border-radius: 4px;
+                  border-width: 0;
+                  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+                  box-sizing: border-box;
+                  color: #0a192f;
+                  cursor: pointer;
+                  display: inline-flex;
+                  font-family: "JetBrains Mono",monospace;
+                  height: 50px;
+                  justify-content: center;
+                  line-height: 1;
+                  list-style: none;
+                  top: 70px;
+                  overflow: hidden;
+                  padding-left: 16px;
+                  padding-right: 16px;
+                  position: relative;
+                  text-align: left;
+                  text-decoration: none;
+                  transition: box-shadow .15s,transform .15s;
+                  user-select: none;
+                  -webkit-user-select: none;
+                  touch-action: manipulation;
+                  white-space: nowrap;
+                  will-change: box-shadow,transform;
+                  font-size: 19px;
+                }
+
+                .button-30:focus {
+                  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+                }
+
+                .button-30:hover {
+                  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+                  transform: translateY(-2px);
+                }
+
+                .button-30:active {
+                  box-shadow: #D6D6E7 0 3px 7px inset;
+                  transform: translateY(2px);
+                }
+              </style>
+              
+              
+                <p class="desc2">machine learning <br>+ cloud computing 
+                  <br>PREV. AT: >> Microsoft, Science Summit @ United Nations </p>
+            
+
+                <!-- <svg class="arrow" id="arrow" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.625 19.6875C5.625 18.9416 5.92132 18.2262 6.44876 17.6988C6.97621 17.1713 7.69158 16.875 8.4375 16.875H81.5625C82.3084 16.875 83.0238 17.1713 83.5512 17.6988C84.0787 18.2262 84.375 18.9416 84.375 19.6875C84.375 20.4334 84.0787 21.1488 83.5512 21.6762C83.0238 22.2037 82.3084 22.5 81.5625 22.5H8.4375C7.69158 22.5 6.97621 22.2037 6.44876 21.6762C5.92132 21.1488 5.625 20.4334 5.625 19.6875V19.6875ZM45 33.75C45.7459 33.75 46.4613 34.0463 46.9887 34.5738C47.5162 35.1012 47.8125 35.8166 47.8125 36.5625V69.1481L59.8837 57.0712C60.4119 56.5431 61.1281 56.2464 61.875 56.2464C62.6219 56.2464 63.3381 56.5431 63.8663 57.0712C64.3944 57.5994 64.6911 58.3156 64.6911 59.0625C64.6911 59.8094 64.3944 60.5256 63.8663 61.0538L46.9913 77.9288C46.73 78.1907 46.4196 78.3985 46.0779 78.5403C45.7362 78.682 45.3699 78.755 45 78.755C44.6301 78.755 44.2638 78.682 43.9221 78.5403C43.5804 78.3985 43.27 78.1907 43.0087 77.9288L26.1337 61.0538C25.6056 60.5256 25.3089 59.8094 25.3089 59.0625C25.3089 58.3156 25.6056 57.5994 26.1337 57.0712C26.6619 56.5431 27.3781 56.2464 28.125 56.2464C28.8719 56.2464 29.5881 56.5431 30.1163 57.0712L42.1875 69.1481V36.5625C42.1875 35.8166 42.4838 35.1012 43.0113 34.5738C43.5387 34.0463 44.2541 33.75 45 33.75V33.75Z" fill="white"/>
+                </svg> -->
+
+            </section>
+
+            <section class="about" id="about">
+                <div class="sectionhead">
+                    <h3>vaishnavi.about()</h3>
+                </div>
+              
+                <style>
+                    .sectionhead {
+                        text-align: center;
+                    }
+                    .sectionhead h3 {
+                        position: relative;
+                        display: inline-block;
+                    }
+                    .sectionhead h3::before,
+                    .sectionhead h3::after {
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        width: 50px; /* Adjust as needed */
+                        height: 1px; /* Adjust as needed */
+                        background-color: white;  
+                    }
+                    .sectionhead h3::before {
+                        left: -70px; /* Adjust position as needed */
+                    }
+                    .sectionhead h3::after {
+                        right: -70px; /* Adjust position as needed */
+                    }
+                </style>
+
+                
+                <div class="daynight">
+                    <p style="font-size: 17.5px;">During the day, I study <a href="https://catalog.gatech.edu/programs/computer-science-bs/"><span style="text-decoration: underline;">Computer Science</span></a> at the College of Computing at Georgia Institute of Technology.
+                        <br><br>At night, I develop, design, and dream up ideas.
+                    </p>
+                </div>
+                <img class="profile-img" src="assets/vaishnavi.png" alt="Photo of myself">
+               
+              
+              
+              
+                <div class="content">
+                    <p class="dotdot" style="font-size: 20px;">what i'm up to...</p>
+                    <p class="list" style="font-size: 15.5px;">> tutoring GT students on CS1331 & CS2050 <span> #education</span>
+                        <br>> researching drone and satellite technology for easy medical access <span>#machine-learning</span>
+                        <br>> developing web-apps GTStudyHive and SpotSwap<span> #programming</span>
+                        <br>> networking with the brightest minds <span>#society-of-women-engineers</span>
+                        <br>> bringing ideas to (virtual) life <span>#coming-soon</span></p>
+                </div>
+            </section>
+
+            <section class="experience" id="exp">
+                <div class="sectionhead" style="margin-top: 270px;">
+                    <h3>vaishnavi.experience()</h3>
+                </div>
+                
+
+
+
+                <div class="topbar">
+                    <p class="now">now!!</p>
+                    <ul>
+                        <li><span>Computer Science @ Georgia Tech</span> |</li>
+                        <li><span>Startup Exchange</span> |</li>
+                        <li><span>GT Web Developement</span> |</li>
+                        <li><span>Grand Challenges LLC |</span></li>
+                      
+                      <li><span> </span> </li>
+                    </ul>
+                    <!-- <div class="indicator"></div> -->
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="tabbody">
+                    <h2 >B.S. Computer Science - COLLEGE OF COMPUTING, GEORGIA TECH</h2>
+                    <p>august 2023 - present</p>
+
+                    <p> 
+                        > Relevant Coursework: Intro To Linear Algebra (MATH1554), Intro to Discrete Mathematics (CS2050); Intro to Object-Oriented Programming (CS1331); Data Structures and Algorithms (CS1332)<br>
+                        > Activities & Clubs: Medical Robotics, Society of Women Engineers, RoboJackets, GTWebDev, GT iOS club<br>
+                        > Grand Challenges Project: Developing blockchain authentication and satellite technology to page for medical access in rural regions <br>
+                        
+                    </p>
+
+                    <p class="green">python, public speaking, blockchain, networking</p>
+                </div>
+
+                <div class="tabbody2">
+                    <h2 >BOARD MEMBER @ STARTUP EXCHANGE</h2>
+                    <p>june 2023 - present</p>
+
+                    <p> > Initiate and maintain relationships with Fortune 100 CEOs and Venture Capitalists<br>
+                        > Leading Partnerships and Sponsorhips for hackathons—AIATL, PitchRX and ImpactRXr<br>
+                        > Developing a cloud computing platform using MFA, HTTPS & TLS to encrypt patents and NDA data in transit 
+                    </p>
+
+                    <p class="green">venture capitalist networking, sponsorship, cloud computing</p>
+                </div>
+
+                <div class="tabbody3">
+                    <h2 >DEVELOPER @ GTWEBDEV</h2>
+                    <p>january 2024 - present</p>
+
+                    <p> > developing the front-end and back-end of GTStudyHive <a href="https://github.gatech.edu/GTStudyHive"><span>(Github repository)</span></a>; a platform to help Georgia Tech students find study spots and study groups around campus real-time.<br>
+                        > used React to develop dynamic user interactivity in real-time updates for active/inactive study sessions.
+                        > deployed and managed the API database with Firebase to store all session and student data securely
+                        > integrated Firebase authentication for secure login and sign-up pages, ensuring a personalized experience for all users
+                    </p>
+
+                    <p class="green">React, Node.js, API, Firebase</p>
+                </div>
+
+                <div class="tabbody4">
+                    <h2>Project Lead @ Grand Challenges Project</h2>
+                    <p>august 2023 - present</p>
+
+                    <p> > lead weekly team meetings to brainstorm and develop our project <br>
+                        > implemented fingerprint biometrics into software code for user authentication (as a "token")  <br>
+                        > research existing solutions and market + condense collected data and information into research presentations and posters<br>
+                        
+                    </p>
+                </div>
+
+                <div class="botbar">
+                    <p class="prev">prev</p>
+                    <ul>
+                        <li class="meow"><span>Research @ IIT, Chennai</span> |</li>
+                        <li class="meow"><span>Women In Research</span> |</li>
+                        <li class="meow"><span>Microsoft Research Development Team</span> |</li>
+                        <li class="meow"><span>New York Academy of Cciences</span> |</li>
+                        <li class="meow"><span>Yale Young Global Scholars</span></li>
+                        <!-- <li class="meow"><span>gitcon</span></li> -->
+                        <!-- <hr /> -->
+                        <!-- <div class="indicator"></div> -->
+                    </ul>
+                </div>
+
+                <div class="tabbody5">
+                    <h2 >RESEARCH ASSISTANT @ IIT</h2>
+                    <p>oct 2022 - may 2023</p>
+
+                    <p> 
+                        > Authored paper that was accepted for publication in the <a href="https://www.worldwidejournals.com/paripex/recent_issues_pdf/2022/November/analysis-of-gene-expression-datasets-to-discover-bloodbased-biomarkers-in-breast-cancer_November_2022_7688309716_8106470.pdf"><span>2022 Indian Journal of Research</span></a><br>
+                        > Wrote R and Flutter code for analysis of gene expression datasets to detect cancer biomarkers <br>
+                        > Discovered potential biomarker (DDX6) in Breast cancer and consulted Professor Abhijit Chaudhari<br>
+                        > optimized hyperparameters for models, developed new loss function, simulated and generated data in matlab<br>
+                        > Worked with <a href="https://biotech.iitm.ac.in/faculty/k-subramaniam/"><span>PhD student, K Subramaniam</span></a>
+                    </p>
+
+                    <p class="green">python, matlab, r, data-analysis</p>
+                </div>
+
+                <div class="tabbody6">
+                    <h2 >FOUNDER & EXEC-DIR @ WIRESEARCH</h2>
+                    <p>february 2020 - july 2023</p>
+
+                    <p> 
+                        > Founded a <a href="https://wiresearch.org"><span>nonprofit organization</span></a> to encourage scientific research advancement in female and non-binary students from underresourced regions<br>
+                        > Received grants from the <a href="https://timesofoman.com/article/124400-prestigious-un-grant-to-muscat-based-student"> <span>Girl Up United Nations</span> and local Oman based NGOs raising $35,000+<br>
+                        > partnered with Plastic Bank to educate their workers about plastic pollution; developed online course deployed internally<br>
+                        > created infographics, articles, and ran summer program with over 500 participants from Bangladesh, Pakistan, Oman, UAE, India<br>
+                        > check out our <a href="https://www.instagram.com/wiresearchorg/"><span>instagram!! </span></a>
+                    </p>
+                </div>
+
+                <div class="tabbody7">
+                    <h2 >STUDENT SOFTWARE INTERN @ MICROSOFT</h2>
+                    <p>may 2022 - december 2022</p>
+
+                    <p> 
+                        > Developed NLP chatbot to answer frequently asked questions in their finance department; was deployed to over 3000 employees internationally<br>
+                        > Programmed machine learning algorithm to detect high potential customers for ‘Here To Hear’ (Microsoft’s Imagine Cup Junior project)<br>
+                        > Studied human-centered design, product design and interaction design<br>
+                      > Built coin sorting machine that uses machine learning with Amy Shan and Tanuja Ganu to sort out rare coins and learn about sorting accuracy<br>
+                    </p>
+
+                    <p class="green">python, html/css, javascript, microsoft azure, human-computer interaction, nlp</p>
+                </div>
+
+                <div class="tabbody8">
+                    <h2 >RESEARCHER & TEAM LEAD @ NYAS</h2>
+                    <p>july 2018 - aug 2018</p>
+
+                    <p> 
+                        > Equitable Vaccine Distribution Truck and Risk Assessment Algorithm, a digital system with an optimization algorithm to prioritize who gets vaccinated <br>
+                        > Programmed system to consider age, underlying conditions, geography, and profession<br>
+                        > Deployed system in partnerships with the New York Academy of Sciences
+                    </p>
+
+                    <p class="green">python, java, machine learning, convolutional neural networks</p>
+                </div>
+
+                <div class="tabbody9">
+                    <h2 >YYGS PARTICIPANT, CO-FOUNDER @ EDUQUARANTINE</h2>
+                    <p>july 2019 - aug 2019</p>
+
+                    <p> 
+                        > YYGS is a 4 week overnight summer camp at Yale; selected for the Innovations in Science & Technology program <br>
+                        > co-founded EduQuarantine, a startup dedicated to bridging education gaps during the Covid-19 quarantine<br>
+                        > programmed machine learning algorithm to predict best study routine depending on user<br>
+                        > Courses Taken—IST11MR: Extrasolar Planets Across the Galaxy IST12MK: The Strategy of Cancer, IST13APal: The Mathematics Behind Covid Infection Modeling, IST14CA: Transhumanism: Making your body as “hi-tech” as your phone; Workshops: Introduction to Patents and Intellectual Property; Yale Research Showcase<br>
+                        > was voted as the 'female powerhouse' of my session
+                    </p>
+
+                    <p class="green">python, html/css, javascript, astrophysics</p>
+                </div>
+            </section>
+
+            <section class="portfolio" id="port">
+                <div class="sectionhead">
+                    <h3>vaishnavi.portfolio()</h3>
+                </div>
+
+                <div class="container">
+                    <div class="menu">
+                        <a href="javascript:;" class="btn" data-filter="all"><span data-filter="all">all</span> |</a>
+                        <a href="javascript:;" class="btn" data-filter="project"><span data-filter="project">projects</span> |</a>
+                        <a href="javascript:;" class="btn" data-filter="media"><span data-filter="media">media</span></a>
+                    </div>
+
+                    <div class="box" id="store-items">
+
+                        <a href="https://www.worldwidejournals.com/paripex/recent_issues_pdf/2022/November/analysis-of-gene-expression-datasets-to-discover-bloodbased-biomarkers-in-breast-cancer_November_2022_7688309716_8106470.pdf"><div class="store-item project">
+
+                            <img src="assets/iros.png" alt="">
+
+                            <svg class="store-svg" viewBox="0 0 279 349" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2.54346" y="2.85645" width="274.409" height="344.024" rx="47" stroke="#171B1D" stroke-width="4"/>
+                            </svg>
+
+
+                            <p>2022 Indian Journal of Research<br> publication</p>
+
+                        </div></a>
+
+                        <a href="https://eduquarantine-yygs.vaishnavi1802.repl.co/home.html"><div class="store-item project">
+
+                            <img src="assets/eduquarantine.png" alt="">
+
+                            <svg class="store-svg" viewBox="0 0 279 349" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2.54346" y="2.85645" width="274.409" height="344.024" rx="47" stroke="#171B1D" stroke-width="4"/>
+                            </svg>
+
+                            <p>eduQuarantine<br> website</p>
+
+                        </div></a>
+
+                        <a href="https://drive.google.com/file/d/1wVwgtpO6rVoh0JNioCzPbmkHwyF5-d4Y/view?usp=sharing"><div class="store-item project">
+
+                            <img src="assets/vaccine.png" alt="">
+                            <svg class="store-svg" viewBox="0 0 279 349" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2.54346" y="2.85645" width="274.409" height="344.024" rx="47" stroke="#171B1D" stroke-width="4"/>
+                            </svg>
+
+                            <p>triple t vaccine <br>presentation</p>
+
+                        </div></a>
+
+                        <a href="https://globalscholars.yale.edu/vaishnavi-manivannan"><div class="store-item media">
+
+                            <img src="assets/yale.png" alt="globe and mail logo">
+
+                            <svg class="store-svg" viewBox="0 0 279 349" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2.54346" y="2.85645" width="274.409" height="344.024" rx="47" stroke="#171B1D" stroke-width="4"/>
+                            </svg>
+
+                            <p>yale university ambassador<br>feature</p>
+
+                        </div></a>
+
+                        <a href="https://github.com/vaishnavimanivannan18/speechRecognition/tree/main"><div class="store-item project">
+                            <img src="assets/voice.png" alt="">
+                            <svg class="store-svg" viewBox="0 0 279 349" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2.54346" y="2.85645" width="274.409" height="344.024" rx="47" stroke="#171B1D" stroke-width="4"/>
+                            </svg>
+
+                            <p>speech detector<br>ML model</p>
+
+                        </div></a>
+
+                        <a href="https://www.muscatdaily.com/2021/08/04/artificial-intelligence-original-intellect/"><div class="store-item media">
+                            <img src="assets/imagine-cup.png" alt="">
+                            <svg class="store-svg" viewBox="0 0 279 349" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2.54346" y="2.85645" width="274.409" height="344.024" rx="47" stroke="#171B1D" stroke-width="4"/>
+                            </svg>  
+
+                            <p>muscat daily<br>microsoft's imagine cup junior</p>
+                        </div></a>
+
+                        <a href="https://timesofoman.com/article/124400-prestigious-un-grant-to-muscat-based-student"><div class="store-item media">
+                            <img src="assets/toi.png" alt="">
+                            <svg class="store-svg" viewBox="0 0 279 349" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2.54346" y="2.85645" width="274.409" height="344.024" rx="47" stroke="#171B1D" stroke-width="4"/>
+                            </svg>
+
+                            <p>times of oman<br>interview article</p>
+
+                        </div></a>
+
+                        <a href="https://ssunga77.sched.com/event/14WFb/ref-19047-bridging-the-gender-gap-in-steam-the-youth-perspective"><div class="store-item media">
+                            <img src="assets/united-nations.png" alt="">
+                            <svg class="store-svg" viewBox="0 0 279 349" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2.54346" y="2.85645" width="274.409" height="344.024" rx="47" stroke="#171B1D" stroke-width="4"/>
+                            </svg>
+
+                            <p>united nations<br>science summit (UNGA77) feature</p>
+
+                        </div></a>
+
+                        <a href="https://www.youtube.com/watch?v=bf3hn0cf9rY&ab_channel=CarolineHuang"><div class="store-item project">
+                            <img src="assets/hth.png" alt="">
+                            <svg class="store-svg" viewBox="0 0 279 349" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2.54346" y="2.85645" width="274.409" height="344.024" rx="47" stroke="#171B1D" stroke-width="4"/>
+                            </svg>
+
+                            <p>microsoft imagine cup<br>'here to hear'</p>
+
+                        </div></a>
+
+                        <a href="https://triplet-telehealth.github.io/"><div class="store-item project">
+                            <img src="assets/triplet.png" alt="">
+                            <svg class="store-svg" viewBox="0 0 279 349" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2.54346" y="2.85645" width="274.409" height="344.024" rx="47" stroke="#171B1D" stroke-width="4"/>
+                            </svg>
+
+                            <p>TripleT<br>telehealth</p>
+
+                        </div></a>
+
+                        <a href="https://github.com/vaishnavimanivannan18/tictactoe/tree/main"><div class="store-item project">
+                            <img src="assets/tictactoe.png" alt="">
+                            <svg class="store-svg" viewBox="0 0 279 349" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2.54346" y="2.85645" width="274.409" height="344.024" rx="47" stroke="#171B1D" stroke-width="4"/>
+                            </svg>
+
+                            <p>tic-tac-toe<br>game</p>
+
+                        </div></a>
+
+                        <a href="https://github.gatech.edu/GTStudyHive"><div class="store-item project">
+                            <img src="assets/gtstudyhive.png" alt="">
+                            <svg class="store-svg" viewBox="0 0 279 349" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="2.54346" y="2.85645" width="274.409" height="344.024" rx="47" stroke="#171B1D" stroke-width="4"/>
+                            </svg>
+
+                            <p>GTStudyHive<br>GT WebDev</p>
+
+                        </div></a>
+
+
+                        <div class="sectionhead" style="margin-top: 200px;">
+                            <h3>i work on graphic design, multimedia too!</h3>
+                            
+                        </div>
+                        <img class="magazine-img" src="assets/magazine.png" alt="Magazine Design">
+                        <style>
+                          
+                          .magazine-img {
+                            border-radius: 20px; /* Adjust the value as needed */
+                            margin-right: 500px; /* Adjust the right margin to move it closer */
+                            margin-left: 5px; /* Adjust the left margin to move it towards the left */
+                            width: 500px;
+                            transition: transform 0.5s;
+                          }
+
+
+                        </style>
+                        <img class="magazine2-img" src="assets/magazine2.png" alt="Magazine Design">
+                        <style>
+                          
+                          .magazine2-img {
+                            border-radius: 20px; /* Adjust the value as needed */
+                            margin-right: 5px; /* Adjust the right margin to move it closer */
+                            margin-left: 600px; /* Adjust the left margin to move it towards the left */
+                            width: 500px;
+                            margin-top: -550px; 
+                            transition: transform 0.5s;
+                             
+                          }
+                          .magazine-img:hover,
+                          .magazine2-img:hover {
+                            transform: scale(1.1) rotateY(10deg); /* Adjust the scale and rotation values as desired */
+                          }
+                        </style>
+
+                    </div>
+                </div>
+                <div class="description">
+                    <p>Designed front and back covers of the <i>Blue&Gold</i>
+                      <br> Magazine using <span style="color:#ffcef3; text-decoration: underline;">Procreate</span> and <span style="color:#fffeb8; text-decoration: underline;">Adobe Photoshop</span></p>
+                </div>
+                <style>
+                  .description {
+                    border-top: 0.1px solid white;
+                    border-bottom: 0.1px solid white;
+                    padding: 10px 0;
+                    margin-top: 50px;
+                    width: 50%;
+                    margin: 50px auto;
+                  }
+                </style>
+                    <div class="style fade-in">
+                      <img class="magazine3-img" src="assets/magazine3.png" alt="Magazine Design">
+                    </div>
+                      
+                      <style>
+                        .magazine3-img {
+                          border-radius: 20px;
+                          width: 500px;
+                          position: center;
+                          margin-top: 70px;
+                          
+                        }
+
+                        
+                      </style>
+              
+                <div class="description2">
+                    <p>Designed front cover of the <i>Inspira</i> Multidisciplinary journey
+                      <br> using <span style="color:#ffcef3; text-decoration: underline;">Procreate</span> and <span style="color:#fffeb8; text-decoration: underline;">Adobe Photoshop</span> and Newspaper + Magazine cutouts</p>
+                </div>
+                <style>
+                  .description2 {
+                    border-top: 0.1px solid white;
+                    border-bottom: 0.1px solid white;
+                    padding: 10px 0;
+                    margin-top: 50px;
+                    width: 50%;
+                    margin: 50px auto;
+                  }
+                </style>
+
+                      <img class="magazine4-img" src="assets/logodesign.png" alt="Magazine Design">
+                      <style>
+                        .magazine4-img {
+                          border-radius: 20px;
+                          width: 500px;
+                          position: center;
+                          margin-top: 70px;
+                        }
+                      </style>
+
+                <div class="description3">
+                    <p>Designed for <i>OncoAI</i>, a biotechnology local startup using  
+                      <br> using <span style="color:#ffcef3; text-decoration: underline;">Procreate</span> </p>
+                </div>
+                <style>
+                  .description3 {
+                    border-top: 0.1px solid white;
+                    border-bottom: 0.1px solid white;
+                    padding: 10px 0;
+                    margin-top: 50px;
+                    width: 50%;
+                    margin: 50px auto;
+                  }
+                </style>
+
+            </section>
+
+
+            <section class="thanks" id="end">
+                <div class="sectionhead">
+                    <h3>thanks for visiting my website &lt;3 </h3>
+                    <h5>if you want to get in touch,<br> feel free to shoot me an <a href="mailto: thevaishnavimanivannan@gmail.com">email</a> or msg me on my socials!</h5>
+                </div>
+
+                <div class="houses">
+                    <pre>
+        )                                (
+       (                                 )
+ ________[]_                              []
+ /^=^-^-^=^-^\                   /^~^~^~^~^~^~\
+ /^-^-^-^-^-^-^\                 /^ ^ ^  ^ ^ ^ ^\
+ /__^_^_^_^^_^_^_\               /_^_^_^^_^_^_^_^_\
+ |  .==.       |       ___       |        .--.  |
+    ^^|  |LI|  [}{] |^^^^^ /___\ ^^^^^|  [}{]  |[]|  |^^^^^
+  &&|__|__|_______|&&   ." | ".   88|________|__|__|888
+ ====             (o_|_o)              ====
+=====             u   u              ====
+                    </pre>
+                </div>
+
+                <div class="phonehouse">
+                    <a href="https://twitter.com/VaishnaviMani18"><svg class="twitter" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.3564 26.6667H11.2498C9.10091 26.6479 6.98313 26.1514 5.04977 25.2133C4.69413 25.0463 4.40131 24.7698 4.21417 24.4243C4.02703 24.0788 3.9554 23.6825 4.00977 23.2933C4.06889 22.9016 4.25028 22.5385 4.52804 22.2559C4.8058 21.9734 5.16573 21.7858 5.55643 21.72C6.75458 21.5602 7.90721 21.1563 8.9431 20.5333C7.14465 19.1272 5.7601 17.2608 4.93619 15.1318C4.11228 13.0027 3.8797 10.6905 4.2631 8.44001C4.31508 8.08354 4.46838 7.74952 4.70476 7.47769C4.94114 7.20585 5.25064 7.00765 5.59643 6.90667C5.93285 6.80102 6.29289 6.7965 6.63186 6.89369C6.97082 6.99088 7.27377 7.18548 7.5031 7.45334C8.28177 8.47439 9.26029 9.32609 10.379 9.95649C11.4977 10.5869 12.733 10.9828 14.0098 11.12C14.0708 9.54914 14.7458 8.06496 15.8898 6.98667C16.461 6.43971 17.1353 6.01189 17.8735 5.72815C18.6117 5.44441 19.399 5.31043 20.1895 5.33401C20.98 5.35759 21.7579 5.53826 22.4779 5.86549C23.1979 6.19272 23.8455 6.65997 24.3831 7.24001C24.5232 7.36383 24.6972 7.44274 24.8826 7.46652C25.068 7.49029 25.2563 7.45783 25.4231 7.37334C25.741 7.2234 26.095 7.16696 26.4438 7.2106C26.7926 7.25424 27.1217 7.39616 27.3929 7.6198C27.6641 7.84344 27.866 8.13959 27.9753 8.47368C28.0845 8.80777 28.0965 9.16604 28.0098 9.50667C27.7022 10.7735 27.1196 11.9571 26.3031 12.9733C26.1231 16.7663 24.4509 20.3344 21.651 22.8995C18.8511 25.4646 15.1507 26.8188 11.3564 26.6667ZM11.3564 24H11.4631C13.0133 24.0533 14.5587 23.7984 16.0097 23.25C17.4606 22.7016 18.7883 21.8706 19.9157 20.8052C21.0431 19.7398 21.9478 18.4612 22.5773 17.0436C23.2069 15.6259 23.5487 14.0974 23.5831 12.5467C23.6051 12.1217 23.7804 11.7191 24.0764 11.4133C24.4016 11.0017 24.679 10.5544 24.9031 10.08C24.4228 10.0809 23.9476 9.98045 23.5088 9.78515C23.07 9.58985 22.6773 9.30414 22.3564 8.94667C22.0479 8.64075 21.6814 8.39944 21.2785 8.23689C20.8755 8.07434 20.4442 7.99381 20.0098 8.00001C19.571 7.98866 19.1342 8.06409 18.7247 8.22197C18.3151 8.37985 17.9408 8.61707 17.6231 8.92001C17.1945 9.32667 16.8803 9.83876 16.7118 10.405C16.5434 10.9713 16.5265 11.5719 16.6631 12.1467L17.0098 13.6667L15.4498 13.7733C13.8512 13.9037 12.2435 13.685 10.7378 13.1325C9.23212 12.5799 7.86454 11.7067 6.72977 10.5733C6.6811 12.3285 7.12017 14.0628 7.99816 15.5834C8.87615 17.104 10.1587 18.3513 11.7031 19.1867L12.9698 19.9067L12.1298 21.1067C11.2214 22.298 9.97668 23.1897 8.55643 23.6667C9.46752 23.895 10.4039 24.007 11.3431 24H11.3564Z" fill="#D0D33C"/>
+                    </svg> </a>
+                    <a href="https://www.linkedin.com/in/vaishnavi-manivannan-45086a196/"><svg class="linkedin" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.0098 8.00299C17.6011 8.00299 19.1272 8.63513 20.2524 9.76035C21.3776 10.8856 22.0098 12.4117 22.0098 14.003V21.003H18.0098V14.003C18.0098 13.4726 17.7991 12.9639 17.424 12.5888C17.0489 12.2137 16.5402 12.003 16.0098 12.003C15.4793 12.003 14.9706 12.2137 14.5956 12.5888C14.2205 12.9639 14.0098 13.4726 14.0098 14.003V21.003H10.0098V14.003C10.0098 12.4117 10.6419 10.8856 11.7671 9.76035C12.8923 8.63513 14.4185 8.00299 16.0098 8.00299V8.00299ZM2.00977 9.00299H6.00977V21.003H2.00977V9.00299Z" stroke="#D0D33C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M4.00977 6.00299C5.11434 6.00299 6.00977 5.10756 6.00977 4.00299C6.00977 2.89842 5.11434 2.00299 4.00977 2.00299C2.9052 2.00299 2.00977 2.89842 2.00977 4.00299C2.00977 5.10756 2.9052 6.00299 4.00977 6.00299Z" stroke="#D0D33C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></a>
+                    <a href="https://github.com/vaishnavimanivannan18"><svg class="github" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.61499 21.381C9.61499 21.381 8.86499 18.381 10.365 16.881C10.365 16.881 7.36499 16.881 5.11499 14.631C2.86499 12.381 3.61499 7.88098 5.11499 6.38098C4.36499 4.13098 5.86499 2.63098 5.86499 2.63098C5.86499 2.63098 8.11499 2.63098 9.61499 4.13098C11.115 3.38098 14.865 3.38098 16.365 4.13098C17.865 2.63098 20.115 2.63098 20.115 2.63098C20.115 2.63098 21.615 4.13098 20.865 6.38098C22.365 7.88098 23.115 12.381 20.865 14.631C18.615 16.881 15.615 16.881 15.615 16.881C17.115 18.381 16.365 21.381 16.365 21.381M8.86499 20.631C6.61499 21.381 4.36499 19.881 3.61499 19.131" stroke="#D0D33C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></a>
+                    <pre>
+        ~~
+        ~
+        _u__
+        /____\
+        |[][]|
+        |[]..|
+       '--'''               
+                    </pre>
+
+
+
+                </div>
+
+                <div class="madeby">
+                    <p>made with <span>&lt;3</span> by vaishnavi manivannan, &copy; 2024</p>
+                </div>
+            </section>
+        </div>
+
+        <script>
+            const menu = document.querySelector('.menu')
+            const close = document.querySelector('.close')
+            const nav = document.querySelector('nav') 
+            const email = document.querySelector('.email')
+
+            menu.addEventListener('click', () => {
+                nav.classList.add('open-nav') //add css class to it when its clicked
+            })
+
+            close.addEventListener('click', () => {
+                nav.classList.remove('open-nav') //add css class to it when its clicked
+            })
+
+            email.addEventListener('click', () => {
+                const hide = document.querySelector('.hiddendiv')
+                const ree = document.querySelector('.email:focus + .hiddendiv')
+
+                navigator.clipboard.writeText
+                    ("ayleen.farnood@gmail.com");
+                setTimeout(() => {
+
+                    hide.style.display = 'none';
+                    }, 1000);
+
+                    ree.style.display = 'block';
+
+            })
+
+            function offsetAnchor() {
+                if(location.hash.length !== 0) {
+                    window.scrollTo(window.scrollX, window.scrollY - 100);
+                }
+            }
+
+            // This will capture hash changes while on the page
+            window.addEventListener("hashchange", offsetAnchor);
+
+            // This is here so that when you enter the page with a hash,
+            // it can provide the offset in that case too. Having a timeout
+            // seems necessary to allow the browser to jump to the anchor first.
+            window.setTimeout(offsetAnchor, 1);
+
+            const tabbody = document.querySelector('.tabbody')
+            const tabbody2 = document.querySelector('.tabbody2')
+            const tabbody3 = document.querySelector('.tabbody3')
+            const tabbody4 = document.querySelector('.tabbody4')
+            const topbarr = document.querySelectorAll('.topbar ul li span')[0]
+            const topbarr1 = document.querySelectorAll('.topbar ul li span')[1]
+            const topbarr2 = document.querySelectorAll('.topbar ul li span')[2]
+            const topbarr3 = document.querySelectorAll('.topbar ul li span')[3]
+            topbarr.style.color = '#D0D33C';
+
+            topbarr.addEventListener("click", function(){
+                tabbody.style.display = 'block';
+                tabbody2.style.display = 'none';
+                tabbody3.style.display = 'none';
+                tabbody4.style.display = 'none';
+                topbarr.style.color = '#D0D33C';
+                topbarr1.style.color = 'white';
+                topbarr2.style.color = 'white';
+                topbarr3.style.color = 'white';
+            })
+
+            topbarr1.addEventListener("click", function(){
+                tabbody.style.display = 'none';
+                tabbody2.style.display = 'block';
+                tabbody3.style.display = 'none';
+                tabbody4.style.display = 'none';
+                topbarr.style.color = 'white';
+                topbarr1.style.color = '#D0D33C';
+                topbarr2.style.color = 'white';
+                topbarr3.style.color = 'white';
+            })
+
+            topbarr2.addEventListener("click", function(){
+                tabbody.style.display = 'none';
+                tabbody2.style.display = 'none';
+                tabbody3.style.display = 'block';
+                tabbody4.style.display = 'none';
+                topbarr.style.color = 'white';
+                topbarr1.style.color = 'white';
+                topbarr2.style.color = '#D0D33C';
+                topbarr3.style.color = 'white';
+            })
+
+            topbarr3.addEventListener("click", function(){
+                tabbody.style.display = 'none';
+                tabbody2.style.display = 'none';
+                tabbody3.style.display = 'none';
+                tabbody4.style.display = 'block';
+                topbarr.style.color = 'white';
+                topbarr1.style.color = 'white';
+                topbarr2.style.color = 'white';
+                topbarr3.style.color = '#D0D33C';
+            })
+
+            const tabbody5 = document.querySelector('.tabbody5')
+            const tabbody6 = document.querySelector('.tabbody6')
+            const tabbody7 = document.querySelector('.tabbody7')
+            const tabbody8 = document.querySelector('.tabbody8')
+            const tabbody9 = document.querySelector('.tabbody9')
+            const botbarr = document.querySelectorAll('.botbar ul li span')[0]
+            const botbarr1 = document.querySelectorAll('.botbar ul li span')[1]
+            const botbarr2 = document.querySelectorAll('.botbar ul li span')[2]
+            const botbarr3 = document.querySelectorAll('.botbar ul li span')[3]
+            const botbarr4 = document.querySelectorAll('.botbar ul li span')[4]
+            botbarr.style.color = '#D0D33C';
+
+
+            botbarr.addEventListener("click", function(){
+                tabbody5.style.display = 'block';
+                tabbody6.style.display = 'none';
+                tabbody7.style.display = 'none';
+                tabbody8.style.display = 'none';
+                tabbody9.style.display = 'none';
+                botbarr.style.color = '#D0D33C';
+                botbarr1.style.color = 'white';
+                botbarr2.style.color = 'white';
+                botbarr3.style.color = 'white';
+                botbarr4.style.color = 'white';
+            })
+
+            botbarr1.addEventListener("click", function(){
+                tabbody5.style.display = 'none';
+                tabbody6.style.display = 'block';
+                tabbody7.style.display = 'none';
+                tabbody8.style.display = 'none';
+                tabbody9.style.display = 'none';
+                botbarr.style.color = 'white';
+                botbarr1.style.color = '#D0D33C';
+                botbarr2.style.color = 'white';
+                botbarr3.style.color = 'white';
+                botbarr4.style.color = 'white';
+            })
+
+            botbarr2.addEventListener("click", function(){
+                tabbody5.style.display = 'none';
+                tabbody6.style.display = 'none';
+                tabbody7.style.display = 'block';
+                tabbody8.style.display = 'none';
+                tabbody9.style.display = 'none';
+                botbarr.style.color = 'white';
+                botbarr1.style.color = 'white';
+                botbarr2.style.color = '#D0D33C';
+                botbarr3.style.color = 'white';
+                botbarr4.style.color = 'white';
+            })
+
+            botbarr3.addEventListener("click", function(){
+                tabbody5.style.display = 'none';
+                tabbody6.style.display = 'none';
+                tabbody7.style.display = 'none';
+                tabbody8.style.display = 'block';
+                tabbody9.style.display = 'none';
+                botbarr.style.color = 'white';
+                botbarr1.style.color = 'white';
+                botbarr2.style.color = 'white';
+                botbarr3.style.color = '#D0D33C';
+                botbarr4.style.color = 'white';
+            })
+
+            botbarr4.addEventListener("click", function(){
+                tabbody5.style.display = 'none';
+                tabbody6.style.display = 'none';
+                tabbody7.style.display = 'none';
+                tabbody8.style.display = 'none';
+                tabbody9.style.display = 'block';
+                botbarr.style.color = 'white';
+                botbarr1.style.color = 'white';
+                botbarr2.style.color = 'white';
+                botbarr3.style.color = 'white';
+                botbarr4.style.color = '#D0D33C';
+            })
+
+            const buttons = document.querySelectorAll('.btn')
+            const storeImages = document.querySelectorAll('.store-item')
+
+            buttons.forEach((button) => {
+                button.addEventListener('click', (e) => {
+                    e.preventDefault()
+                    const filter = e.target.dataset.filter
+
+                    storeImages.forEach((aa) => {
+                        if (filter === 'all'){
+                            aa.style.display = 'flex'
+                        } else {
+                            if(aa.classList.contains(filter)){
+                                aa.style.display = 'flex'
+                            }
+                            else{
+                                aa.style.display = 'none'
+                            }
+                        }
+                    })
+                })
+            })
+
+            const but1 = document.querySelectorAll('.container .menu a span')[0]
+            const but2 = document.querySelectorAll('.container .menu a span')[1]
+            const but3 = document.querySelectorAll('.container .menu a span')[2]
+            but1.style.color = '#D0D33C';
+
+            buttons[0].addEventListener('click', function(){
+                but1.style.color = '#D0D33C';
+                but2.style.color = 'white';
+                but3.style.color = 'white';
+            })
+
+            buttons[1].addEventListener('click', function(){
+                but1.style.color = 'white';
+                but2.style.color = '#D0D33C';
+                but3.style.color = 'white';
+            })
+
+            buttons[2].addEventListener('click', function(){
+                but1.style.color = 'white';
+                but2.style.color = 'white';
+                but3.style.color = '#D0D33C';
+            })
+
+
+
+        </script>
+
+    </body>
+</html>

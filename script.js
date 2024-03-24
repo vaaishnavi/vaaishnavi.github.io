@@ -32,7 +32,7 @@ function deleteText(element) {
 var wordsAndColors = [
   { word: "developing backend @ GTWebDev & GT iOS", color: "pink" },
   { word: "designing UI/UX content @ Ramblin' Reck Club", color: "orange" },
-  { word: "networking @ Startup Exchange GT", color: "yellow" }
+  { word: "researching drone/satellite technologies @ GC LLC", color: "yellow" }
 ];
 var currentIndex = 0;
 

@@ -62,6 +62,12 @@ body .container-typing .input-cursor {
   align-items: center;
 }
 
+.wir-img1 {
+    width: 30%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 20px;   
+}
+
 
 .input-cursor {
   display: inline-block;

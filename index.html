@@ -61,7 +61,12 @@
       <a href="#contact">
         <img src="/assets/contactme.png" alt="Logo" class="contactme-img">
       </a>
-
+      <a href="https://www.linkedin.com/in/vmanivannan" target="_blank">
+        <img src="/assets/linkedin2.png" alt="Logo" class="linkedin2-img">
+      </a>
+      <a href="https://github.com/vaaishnavi" target="_blank">
+        <img src="/assets/githublol.png" alt="Logo" class="githublol-img">
+      </a>
       
       <style>
         .logo-img {
@@ -86,6 +91,7 @@
     left: 52%; /* Centers the image horizontally */
     transform: translateX(-50%); /* Corrects the offset cause */
         }
+        
       </style>
       <style>
         .linkedin2-img{
@@ -110,6 +116,20 @@
     left: 72%; /* Centers the image horizontally */
     transform: translateX(-50%); /* Corrects the offset cause*/
         }
+      </style>
+      <style>
+        .githublol-img{
+    width: 145px; /* Adjust this value as needed */
+    height: auto; /* Maintain the aspect ratio */
+    display: block; /* Ensures the image is displayed as a block element */
+    margin: 0 auto; /* Centers the image horizontally */
+    position: absolute; /* Moves the image to the top */
+    top: 528.5px; /* Positions the image at the top */
+    left: 82%; /* Centers the image horizontally */
+    transform: translateX(-50%); /* Corrects the offset cause*/
+        }
+        /* General hover effect for all images */
+      
       </style>
       
 
@@ -283,7 +303,7 @@
           <div class="article-container">
             <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
           </div>
-          <h2 class="experience-sub-title project-title">Research — Autonomous Cars</h2>
+          <h2 class="experience-sub-title project-title">F1 Tenth Autonomous Cars</h2>
           <div class="btn-container">
             <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/pamin1/f1tenth'">
               Github
@@ -291,7 +311,51 @@
             
           </div>
         </div>
-        
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-4.png" alt="Project 4" class="project-img" />
+            </div>
+            <p class="experience-sub-title project-title">MakeMusic (iOS app)</p>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='#'">
+                Github
+              </button>     
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-5.png" alt="Project 5" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Project 5</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='#'">
+                Github
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-6.png" alt="Project 6" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Project 6</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2 project-btn" onclick="location.href='#'">
+                Github
+              </button>
+            </div>
+          </div>
+        </div>
+        <style>
+          .about-containers {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 2rem; /* Space between boxes */
+          width: 100%;
+        }
+
+        </style>
       </div>
     </div>
     <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />

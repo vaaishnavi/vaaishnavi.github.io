@@ -1,0 +1,35 @@
+.project-card {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    padding: 1.5rem;
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  html.dark .project-card {
+    background-color: #262626;
+    color: white;
+  }
+  
+  .badge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    display: inline-block;
+  }
+  
+  .tag-btn {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    background-color: #eee;
+    color: #333;
+    transition: background 0.2s ease;
+  }
+  
+  .tag-btn:hover {
+    background-color: #ddd;
+  }
+  

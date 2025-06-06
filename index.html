@@ -50,7 +50,7 @@
         <p class="text-xl md:text-2xl font-medium mb-2 text-black dark:text-gray-200">
           hey <span class="inline-block animate-wiggle">👋</span> my name is
         </p>
-        <h1 class="text-4xl md:text-6xl font-bold italic text-[#ea5b0c] font-serif">
+        <h1 class="text-4xl md:text-6xl font-bold italic text-[#fffeb8] font-serif">
           vaishnavi 
         </h1>
         <p class="mt-4 max-w-xl text-sm text-gray-700 dark:text-gray-300">
@@ -67,26 +67,36 @@
 
       <!-- Right (Image) -->
       <div class="mt-10 md:mt-0 md:ml-10">
-        <img src="headshot.png" alt="Vaishnavi photo" class="w-64 md:w-80 rounded-xl shadow-lg" />
+        <img src="headshot.png" alt="Vaishnavi photo" class="w-64 md:w-80 rounded-full shadow-lg" style="position: relative; left: -100px;" />
       </div>
     </div>
   </section>
 
   <!-- Projects -->
-  <section class="py-20 px-4 bg-white dark:bg-[#181818] transition-colors duration-300">
+  <section class="py-20 px-4 bg-white dark:bg-[#181818] transition-colors duration-300" 
+            id = "projects">
     <h2 class="text-3xl text-center font-semibold mb-10 text-black dark:text-white">✨ Featured Projects</h2>
 
     <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+    <div class="relative rounded-xl overflow-hidden shadow-lg text-white">
+        <!-- Background image -->
+      <img src="hytech.png" alt="Background" class="absolute inset-0 w-full h-full object-cover z-0" />
+      
+        <!-- Overlay (for darkening image) -->
+      <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
       <!-- Project 1 -->
-      <div class="project-card">
+      <div class="relative z-20 p-6">
         <span class="badge bg-yellow-300">🏆 Best Developer Tool</span>
         <h3 class="text-xl font-bold mt-4">🏎 Hytech Racing</h3>
         <p class="mt-2 text-sm">As Lead Software Engineer, I built real-time telemetry systems and secure data tools powering GT’s electric race car. Led a 15-person team working across Python, Go, React, and Docker, streamlining data collection and visualization for 100+ engineers.</p>
-        <div class="mt-4 flex gap-2">
+        
+        <div class="mt-4 flex gap-3">
           <a href="https://github.com/hytech-racing" class="tag-btn">Technical specs →</a>
           <a href="#" class="tag-btn">See the demo →</a>
         </div>
       </div>
+    </div>
+
 
       <!-- Project 2 -->
       <div class="project-card">
@@ -135,7 +145,7 @@
   </section>
   
   <!-- Featured In Section -->
-  <section class="py-20 px-4 bg-white dark:bg-[#181818] transition-colors duration-300">
+  <section class="py-20 px-4 bg-white dark:bg-[#181818] transition-colors duration-300" id = "featured">
     <h2 class="text-3xl text-center font-semibold mb-10 text-black dark:text-white">🌟 Featured In</h2>
   
     <p class="max-w-3xl mx-auto text-center text-gray-700 dark:text-gray-300 mb-10">
@@ -151,18 +161,27 @@
         <img src="article-preview.jpg" alt="Article preview" class="w-full h-48 object-cover">
         <div class="absolute bottom-0 bg-black/70 text-white w-full p-4">
           <h3 class="text-lg font-semibold">UNGA77</h3>
-          <p class="text-sm">on the panel of Science Summit at the United Nations General Assembly (UNGA77)!</p>
+          <p class="text-sm">on the panel of Science Summit at the United Nations General Assembly</p>
+        </div>
+      </a>
+      <!-- Website Preview Card -->
+      <a href="https://www.researchgate.net/publication/366220136_ANALYSIS_OF_GENE_EXPRESSION_DATASETS_TO_DISCOVER_BLOOD-BASED_BIOMARKERS_IN_BREAST_CANCER" target="_blank" class="relative block rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
+        <img src="researchgate.jpg" alt="Research Gate " class="w-full h-48 object-cover">
+        <div class="absolute bottom-0 bg-black/70 text-white w-full p-4">
+          <h3 class="text-lg font-semibold">ResearchGate published thesis</h3>
+          <p class="text-sm">my published bioinformatics research paper</p>
         </div>
       </a>
   
-      <!-- TEDx or YouTube Video -->
-      <iframe width="100%" height="215" src="https://www.youtube.com/embed/your-video-id" title="TEDx Talk" frameborder="0" allowfullscreen class="rounded-xl"></iframe>
+      <!-- TEDx or YouTube Video 
+      <iframe width="100%" height="215" src="https://www.researchgate.net/publication/366220136_ANALYSIS_OF_GENE_EXPRESSION_DATASETS_TO_DISCOVER_BLOOD-BASED_BIOMARKERS_IN_BREAST_CANCER" title="ResearchGate" frameborder="0" allowfullscreen class="rounded-xl"></iframe>
     </div>
-  </section>
+  </section> -->
+
 
   <!-- Footer -->
-  <footer class="text-center text-sm py-6 text-gray-500 dark:text-gray-400">
-    © 2025 Vaishnavi Manivannan
+  <footer class="text-center text-sm py-6 text-gray-500 dark:text-gray-400 text-center">
+    © 2025 Vaishnavi Manivannan 🔮 
   </footer>
 
   <script>

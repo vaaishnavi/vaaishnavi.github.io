@@ -59,7 +59,7 @@
 
         <!-- Buttons Row -->
         <div class="mt-6 flex flex-wrap gap-3 justify-center md:justify-start">
-          <a href="https://www.linkedin.com/in/vmanivannan/" class="text-sm font-medium px-5 py-2 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition">Let's connect →</a>
+          <a href="https://www.linkedin.com/in/vmanivannan/" class="bop text-sm font-medium px-5 py-2 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition">Let's connect →</a>
           <a href="https://github.com/vaaishnavi" target="_blank" class="text-sm font-medium px-5 py-2 rounded-full bg-[#b8c7bd] text-white hover:opacity-90 transition">Github</a>
           <a href="/VM.pdf" target="_blank" class="text-sm font-medium px-5 py-2 rounded-full bg-[#d4d88b] text-white hover:opacity-90 transition">Resume</a>
         </div>
@@ -68,8 +68,8 @@
       <!-- Right (Image) -->
       <div class="mt-10 md:mt-0 md:ml-10">
         <img src="headshot.png" alt="Vaishnavi photo" class="w-64 md:w-80 shadow-lg rounded-lg" style="position: relative; left: -100px;" />
-        <img src="hibiscus.png" alt="Flower" class="background-image" style="position: absolute; top: 370px; left: 50px; width: 450px; height: 600px; z-index: 0; opacity: 0.5;">
-        <img src="yellow-hibiscus.png" alt="Flower" class="background-image" style="position: absolute; top: 450px; left: 1000px; width: 600px; height: 600px; z-index: 0; opacity: 0.5;">
+        <img src="hibiscus.png" alt="Flower" class="background-image" style="position: absolute; top: 455px; left: 50px; width: 380px; height: 450px; z-index: 0; opacity: 0.5;">
+        <img src="yellow-hibiscus.png" alt="Flower" class="background-image" style="position: absolute; top: 480px; left: 1000px; width: 450px; height: 450px; z-index: 0; opacity: 0.5;">
       </div>
     </div>
   </section>
@@ -97,11 +97,10 @@
         </div>
       </div>
     </div>
-
       
       <!-- Project 2 -->
       
-      <div class="project-card" relative bg-cover bg-center text-black p-6 rounded-xl shadow-md" style="background-image: url('unbias.jpg');">
+      <div class="project-card" relative bg-contain bg-center bg-no-repeat text-black p-6 rounded-xl shadow-md" style="background-image: url('unbias.jpg');">
       <div class="backdrop-blur-sm bg-white/80 p-4 rounded-lg">
         <span class="badge bg-green-400">🏆 Overall Winner</span>
         <h3 class="text-xl font-bold mt-4">W@CC Georgia Tech Hackathon '25: UnBias</h3>
@@ -189,6 +188,16 @@
       <iframe width="100%" height="215" src="https://www.researchgate.net/publication/366220136_ANALYSIS_OF_GENE_EXPRESSION_DATASETS_TO_DISCOVER_BLOOD-BASED_BIOMARKERS_IN_BREAST_CANCER" title="ResearchGate" frameborder="0" allowfullscreen class="rounded-xl"></iframe>
     </div>
   </section> -->
+  <div id="glow-cursor"></div>
+  <script>
+    const cursor = document.getElementById('glow-cursor');
+  
+    window.addEventListener('mousemove', (e) => {
+      cursor.style.top = `${e.clientY}px`;
+      cursor.style.left = `${e.clientX}px`;
+    });
+  </script>
+  
 
 
   <!-- Footer -->

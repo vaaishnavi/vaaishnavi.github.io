@@ -33,3 +33,26 @@
     background-color: #ddd;
   }
   
+  @keyframes bop {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-7px); }
+  }
+  .bop {
+    animation: bop 1s ease-in-out infinite;
+  }
+  
+  /* Cursor glow base style */
+  #glow-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 191, 254, 0.6) 0%, transparent 70%);
+    box-shadow: 0 0 20px rgba(255, 46, 192, 0.5), 0 0 40px rgba(0, 191, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out;
+    z-index: 9999;
+  }

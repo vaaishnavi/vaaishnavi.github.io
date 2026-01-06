@@ -56,3 +56,46 @@
     transition: transform 0.1s ease-out;
     z-index: 9999;
   }
+
+/* ===== Tesla Slideshow ===== */
+
+.tesla-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.tesla-slide.active {
+  opacity: 1;
+}
+
+/* Arrow button */
+.tesla-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  border-radius: 9999px;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 20;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.tesla-arrow {
+  opacity: 1;
+}
+
+.tesla-arrow:hover {
+  transform: translateY(-50%) scale(1.1);
+}

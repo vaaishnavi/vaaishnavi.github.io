@@ -5,12 +5,35 @@
   <title>Vaishnavi — Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    };
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: 'Inter', sans-serif;
       transition: background-color 0.3s, color 0.3s;
+    }
+
+    .theme-toggle {
+      display: grid;
+      width: 2.75rem;
+      height: 2.75rem;
+      place-items: center;
+      border-radius: 9999px;
+      background: #344e2b;
+      color: white;
+      font-size: 1.5rem;
+      line-height: 1;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .theme-toggle:hover {
+      background: #263d20;
+      transform: scale(1.06);
     }
 
     @keyframes wiggle {
@@ -43,61 +66,74 @@
 </script>
 
 
-<body class="bg-white dark:bg-[#181818] text-black dark:text-white transition-colors duration-300">
+<body class="bg-[#fffde1] dark:bg-[#182118] text-[#263d20] dark:text-[#fffde1] transition-colors duration-300">
 
   <!-- Navigation Bar -->
-  <nav class="sticky top-0 z-50 bg-white/80 dark:bg-[#181818]/80 backdrop-blur-md shadow-sm">
+  <nav class="sticky top-0 z-50 bg-[#fffde1]/90 dark:bg-[#182118]/90 backdrop-blur-md shadow-sm">
     <div class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
       <div class="flex space-x-6 font-medium text-sm">
         <a href="#home" class="hover:text-blue-500 transition">Home</a>
+        <a href="#experiences" class="hover:text-blue-500 transition">Experiences</a>
         <a href="#projects" class="hover:text-blue-500 transition">Featured Projects</a>
         <a href="#featured" class="hover:text-blue-500 transition">Featured In</a>
       </div>
-      <button onclick="toggleMode()" class="px-3 py-1 text-sm rounded-full border border-gray-300 dark:border-white">
-        🌞 / 🌙
+      <button id="theme-toggle" type="button" onclick="toggleMode()" class="theme-toggle" aria-label="Switch to dark mode" title="Switch to dark mode">
+        <svg viewBox="0 0 24 24" width="25" height="25" aria-hidden="true"><path fill="currentColor" d="M20.7 15.2A8.5 8.5 0 0 1 8.8 3.3 9 9 0 1 0 20.7 15.2Z"/></svg>
       </button>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section class="px-6 md:px-20 py-20 bg-white dark:bg-[#181818] transition-colors duration-300">
+  <section id="home" class="min-h-[calc(100vh-76px)] flex items-center px-6 md:px-20 py-20 bg-[#fffde1] dark:bg-[#182118] transition-colors duration-300">
     <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
       <!-- Left (Text) -->
-      <div class="ml-[90px] text-left">
+      <div class="md:ml-[90px] text-left md:w-3/5">
         <p class="text-xl md:text-2xl font-medium mb-2 text-black dark:text-gray-200">
           hey <span class="inline-block animate-wiggle">👋</span> my name is
         </p>
-        <h1 class="text-4xl md:text-6xl font-bold italic text-[#fffeb8] font-serif">
-          vaishnavi 
+        <h1 class="text-5xl md:text-7xl font-bold italic leading-[0.95] text-[#344e2b] dark:text-[#fff4a8] font-serif">
+          <span class="block">Vaishnavi</span>
+          <span class="block ml-8 md:ml-16">Manivannan</span>
         </h1>
-        <p class="mt-4 max-w-xl text-sm text-gray-700 dark:text-gray-300">
+        <p class="mt-6 max-w-xl text-base text-gray-700 dark:text-gray-300">
           i study computer science and industrial design student @ Georgia Tech, building tech that blends code, creativity, and care — especially in AI, design, and accessibility.
         </p>
 
         <!-- Buttons Row -->
         <div class="mt-6 flex flex-wrap gap-3 justify-center md:justify-start">
-          <a href="https://www.linkedin.com/in/vmanivannan/" class="bop text-sm font-medium px-5 py-2 rounded-full bg-blue-500 text-white hover:bg-blue-600 transition">Let's connect →</a>
-          <a href="https://github.com/vaaishnavi" target="_blank" class="text-sm font-medium px-5 py-2 rounded-full bg-[#b8c7bd] text-white hover:opacity-90 transition">Github</a>
-          <a href="/VM.pdf" target="_blank" class="text-sm font-medium px-5 py-2 rounded-full bg-[#d4d88b] text-white hover:opacity-90 transition">Resume</a>
+          <a href="https://www.linkedin.com/in/vmanivannan/" class="bop text-sm font-medium px-5 py-2 rounded-full bg-[#287f79] text-white hover:bg-[#1f6964] transition">Let's connect →</a>
+          <a href="https://github.com/vaaishnavi" target="_blank" class="text-sm font-medium px-5 py-2 rounded-full bg-[#344e2b] text-white hover:bg-[#263d20] transition">Github</a>
+          <a href="/VM.pdf" target="_blank" class="text-sm font-medium px-5 py-2 rounded-full bg-[#718355] text-white hover:bg-[#5d7045] transition">Resume</a>
         </div>
       </div>
 
       <!-- Right (Image) -->
-      <div class="mt-10 md:mt-0 md:ml-10">
-        <img src="headshot.png" alt="Vaishnavi photo" class="w-64 md:w-80 shadow-lg rounded-lg" style="position: relative; left: -100px;" />
-        <img src="hibiscus.png" alt="Flower" class="background-image" style="position: absolute; top: 455px; left: 50px; width: 380px; height: 450px; z-index: 0; opacity: 0.5;">
-        <img src="yellow-hibiscus.png" alt="Flower" class="background-image" style="position: absolute; top: 480px; left: 1000px; width: 450px; height: 450px; z-index: 0; opacity: 0.5;">
+      <div class="mt-10 md:mt-0 md:ml-20 md:mr-4 flex-shrink-0">
+        <img src="headshot.png" alt="Vaishnavi photo" class="w-64 h-64 md:w-80 md:h-80 object-cover shadow-lg rounded-lg" />
       </div>
     </div>
   </section>
 
     <!-- Experiences -->
-  <section class="py-20 px-4 bg-white dark:bg-[#181818] transition-colors duration-300" id="experiences">
+  <section class="py-20 px-4 bg-[#fffde1] dark:bg-[#182118] transition-colors duration-300" id="experiences">
     <h2 class="text-3xl text-center font-semibold mb-12 text-black dark:text-white">
       .experiences()
     </h2>
 
     <div class="max-w-6xl mx-auto space-y-12">
+
+      <!-- Amazon Experience -->
+      <div class="flex flex-col md:flex-row items-center gap-8 border border-[#9aaa72] dark:border-[#d4d88b] rounded-xl p-6 shadow-sm bg-[#fff9c7]/60 dark:bg-[#223022]">
+        <div class="w-full text-[#263d20] dark:text-white">
+          <span class="badge bg-[#f3c45b] text-[#263d20]">Amazon</span>
+          <span class="badge bg-[#f3c45b] text-[#263d20]">May 2026 - August 2026</span>
+          <h3 class="text-2xl font-bold mt-3">Software Development Engineer Intern</h3>
+          <p class="text-sm text-[#526347] dark:text-gray-300 mt-1">Sunnyvale, CA</p>
+          <p class="mt-4 text-sm leading-relaxed">
+            Built an internal MCP server that securely unified enterprise APIs for LLM access, plus a Java and Spring Boot service that streamlined data across multiple systems.
+          </p>
+        </div>
+      </div>
 
       <!-- Experience 1 (Image Right) -->
       <div class="flex flex-col md:flex-row items-center gap-8 border border-gray-200 dark:border-gray-700 rounded-xl p-6 shadow-sm">
@@ -116,9 +152,8 @@
 
         <div class="md:w-1/3 relative h-48 rounded-lg overflow-hidden group">
 
-          <img src="tesla1.jpg" class="tesla-slide active" alt="Tesla 1">
+          <img src="tesla3.jpg" class="tesla-slide active" alt="Tesla 3">
           <img src="tesla2.jpg" class="tesla-slide" alt="Tesla 2">
-          <img src="tesla3.jpg" class="tesla-slide" alt="Tesla 3">
         
           <!-- Right Arrow -->
           <button class="tesla-arrow" aria-label="Next image">
@@ -172,7 +207,7 @@
 
 
   <!-- Projects -->
-  <section class="py-20 px-4 bg-white dark:bg-[#181818] transition-colors duration-300" id = "projects">
+  <section class="py-20 px-4 bg-[#fffde1] dark:bg-[#182118] transition-colors duration-300" id = "projects">
     <h2 class="text-3xl text-center font-semibold mb-10 text-black dark:text-white">.projects()</h2>
 
     <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -196,7 +231,7 @@
     </div>
       
       <!-- Project 2 -->
-      <div class="project-card" relative bg-contain bg-center bg-no-repeat text-black p-6 rounded-xl shadow-md" style="background-image: url('unbias.jpg');">
+      <div class="project-card bg-contain bg-center bg-no-repeat text-black p-6 rounded-xl shadow-md" style="background-image: url('unbias.jpg');">
       <div class="backdrop-blur-sm bg-white/80 p-4 rounded-lg">
         <span class="badge bg-green-400">🏆 Overall Winner</span>
         <h3 class="text-xl font-bold mt-4">W@CC Georgia Tech Hackathon '25: UnBias</h3>
@@ -244,7 +279,7 @@
   </section>
   
   <!-- Featured In Section -->
-  <section class="py-20 px-4 bg-white dark:bg-[#181818] transition-colors duration-300" id = "featured">
+  <section class="py-20 px-4 bg-[#fffde1] dark:bg-[#182118] transition-colors duration-300" id = "featured">
     <h2 class="text-3xl text-center font-semibold mb-10 text-black dark:text-white">.featured_in()</h2>
   
     <p class="max-w-3xl mx-auto text-center text-gray-700 dark:text-gray-300 mb-10">
@@ -302,9 +337,25 @@
   </footer>
 
   <script>
+    const themeToggle = document.getElementById('theme-toggle');
+
+    function updateThemeButton() {
+      const isDark = document.documentElement.classList.contains('dark');
+      const label = isDark ? 'Switch to light mode' : 'Switch to dark mode';
+      themeToggle.innerHTML = isDark
+        ? '<svg viewBox="0 0 24 24" width="25" height="25" aria-hidden="true"><path fill="currentColor" d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0-5a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0V3a1 1 0 0 1 1-1Zm0 17a1 1 0 0 1 1 1v2a1 1 0 1 1-2 0v-2a1 1 0 0 1 1-1ZM2 12a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Zm17 0a1 1 0 0 1 1-1h2a1 1 0 1 1 0 2h-2a1 1 0 0 1-1-1ZM4.9 4.9a1 1 0 0 1 1.4 0l1.4 1.4a1 1 0 0 1-1.4 1.4L4.9 6.3a1 1 0 0 1 0-1.4Zm11.4 11.4a1 1 0 0 1 1.4 0l1.4 1.4a1 1 0 0 1-1.4 1.4l-1.4-1.4a1 1 0 0 1 0-1.4ZM19.1 4.9a1 1 0 0 1 0 1.4l-1.4 1.4a1 1 0 0 1-1.4-1.4l1.4-1.4a1 1 0 0 1 1.4 0ZM7.7 16.3a1 1 0 0 1 0 1.4l-1.4 1.4a1 1 0 0 1-1.4-1.4l1.4-1.4a1 1 0 0 1 1.4 0Z"/></svg>'
+        : '<svg viewBox="0 0 24 24" width="25" height="25" aria-hidden="true"><path fill="currentColor" d="M20.7 15.2A8.5 8.5 0 0 1 8.8 3.3 9 9 0 1 0 20.7 15.2Z"/></svg>';
+      themeToggle.setAttribute('aria-label', label);
+      themeToggle.setAttribute('title', label);
+    }
+
     function toggleMode() {
       document.documentElement.classList.toggle("dark");
+      updateThemeButton();
     }
+
+    document.documentElement.classList.remove('dark');
+    updateThemeButton();
   </script>
 </body>
 </html>
